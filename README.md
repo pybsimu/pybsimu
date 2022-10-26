@@ -17,7 +17,7 @@
 
 Use the Visual Studio Code Dev Containers extension, point it at the container you started above. There is an option for the path to point it at, point it at the root of the filesystem, '/'.
 
-Then you'll need to 'Edit includePath setting', and add the following:
+Then for intellisense to work, you'll need to 'Edit includePath setting', and add the following:
 
 ```/home/ubuntu/include/**```
 
