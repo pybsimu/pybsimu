@@ -27,3 +27,5 @@ RUN tar zxvf libibsimu-1.0.6dev_9cbf04.tar.gz &&\
     make install 
 
 COPY --chown=$username . /home/$username/
+
+COPY vscode/* /.vscode/
