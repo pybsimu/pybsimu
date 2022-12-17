@@ -24,3 +24,11 @@ Then for intellisense to work, you'll need to 'Edit includePath setting', and ad
 You can get to the 'Edit includePath setting' by either using the "C/Cpp: Edit Configurations" command in the command palette or by selecting "Edit "includePath" setting" in the light bulb menu
 
 This is based on this super helpful post:   https://andrey-shornikov.medium.com/ibsimu-simulation-package-in-a-docker-container-b14203aa57b0
+
+# TODO: cleanup
+
+ibsimu_config.sh is in the model directory, need to move it into the dev image.
+```
+# sh ibsimu_config/ibsimu_config.sh
+# source ~/.bashrc
+```
