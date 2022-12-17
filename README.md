@@ -22,3 +22,5 @@ Then for intellisense to work, you'll need to 'Edit includePath setting', and ad
 ```/home/ubuntu/include/**```
 
 You can get to the 'Edit includePath setting' by either using the "C/Cpp: Edit Configurations" command in the command palette or by selecting "Edit "includePath" setting" in the light bulb menu
+
+This is based on this super helpful post:   https://andrey-shornikov.medium.com/ibsimu-simulation-package-in-a-docker-container-b14203aa57b0
