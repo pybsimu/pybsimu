@@ -15,7 +15,8 @@ from pybsimu import \
     FIELD_SYMMETRIC_POTENTIAL, \
     BOUND_DIRICHLET, \
     BOUND_NEUMANN, \
-    MODE_2D
+    MODE_2D, \
+    MSG_VERBOSE
 
 
 def solid1(x, y, z):
@@ -94,7 +95,7 @@ def simulate():
     geomplotter.plot_png("plot1.png")
 
 def vlasov2d():
-    ibsimu.set_message_threshold(pybsimu.MSG_VERBOSE)
+    ibsimu.set_message_threshold(MSG_VERBOSE, 1)
     ibsimu.set_thread_count(4)
     simulate()
     
