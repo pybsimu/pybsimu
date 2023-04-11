@@ -95,6 +95,60 @@ except __builtin__.Exception:
         pass
     _newclass = 0
 
+class Vec3D(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Vec3D, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Vec3D, name)
+    __repr__ = _swig_repr
+
+    def x(self):
+        return _pybsimu.Vec3D_x(self)
+
+    def y(self):
+        return _pybsimu.Vec3D_y(self)
+
+    def z(self):
+        return _pybsimu.Vec3D_z(self)
+
+    def __init__(self):
+        this = _pybsimu.new_Vec3D()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _pybsimu.delete_Vec3D
+    __del__ = lambda self: None
+Vec3D_swigregister = _pybsimu.Vec3D_swigregister
+Vec3D_swigregister(Vec3D)
+
+class Int3D(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Int3D, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Int3D, name)
+    __repr__ = _swig_repr
+
+    def x(self):
+        return _pybsimu.Int3D_x(self)
+
+    def y(self):
+        return _pybsimu.Int3D_y(self)
+
+    def z(self):
+        return _pybsimu.Int3D_z(self)
+
+    def __init__(self):
+        this = _pybsimu.new_Int3D()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _pybsimu.delete_Int3D
+    __del__ = lambda self: None
+Int3D_swigregister = _pybsimu.Int3D_swigregister
+Int3D_swigregister(Int3D)
+
 MESH_HPP = _pybsimu.MESH_HPP
 class Mesh(_object):
     __swig_setmethods__ = {}
@@ -195,10 +249,6 @@ class Bound(_object):
     __del__ = lambda self: None
 Bound_swigregister = _pybsimu.Bound_swigregister
 Bound_swigregister(Bound)
-
-def __str__(os, b):
-    return _pybsimu.__str__(os, b)
-__str__ = _pybsimu.__str__
 
 SMESH_NODE_ID_MASK = _pybsimu.SMESH_NODE_ID_MASK
 SMESH_NODE_ID_PURE_VACUUM = _pybsimu.SMESH_NODE_ID_PURE_VACUUM
@@ -1860,6 +1910,188 @@ class GeomPlotter(Plotter, GeomPlot):
     __del__ = lambda self: None
 GeomPlotter_swigregister = _pybsimu.GeomPlotter_swigregister
 GeomPlotter_swigregister(GeomPlotter)
+
+TYPES_HPP = _pybsimu.TYPES_HPP
+MODE_1D = _pybsimu.MODE_1D
+MODE_2D = _pybsimu.MODE_2D
+MODE_CYL = _pybsimu.MODE_CYL
+MODE_3D = _pybsimu.MODE_3D
+FIELD_EXTRAPOLATE = _pybsimu.FIELD_EXTRAPOLATE
+FIELD_MIRROR = _pybsimu.FIELD_MIRROR
+FIELD_ANTIMIRROR = _pybsimu.FIELD_ANTIMIRROR
+FIELD_SYMMETRIC_POTENTIAL = _pybsimu.FIELD_SYMMETRIC_POTENTIAL
+FIELD_ZERO = _pybsimu.FIELD_ZERO
+FIELD_NAN = _pybsimu.FIELD_NAN
+FIELD_NONE = _pybsimu.FIELD_NONE
+FIELD_EPOT = _pybsimu.FIELD_EPOT
+FIELD_SCHARGE = _pybsimu.FIELD_SCHARGE
+FIELD_TRAJDENS = _pybsimu.FIELD_TRAJDENS
+FIELD_EFIELD = _pybsimu.FIELD_EFIELD
+FIELD_EFIELD_X = _pybsimu.FIELD_EFIELD_X
+FIELD_EFIELD_Y = _pybsimu.FIELD_EFIELD_Y
+FIELD_EFIELD_Z = _pybsimu.FIELD_EFIELD_Z
+FIELD_BFIELD = _pybsimu.FIELD_BFIELD
+FIELD_BFIELD_X = _pybsimu.FIELD_BFIELD_X
+FIELD_BFIELD_Y = _pybsimu.FIELD_BFIELD_Y
+FIELD_BFIELD_Z = _pybsimu.FIELD_BFIELD_Z
+BOUND_DIRICHLET = _pybsimu.BOUND_DIRICHLET
+BOUND_NEUMANN = _pybsimu.BOUND_NEUMANN
+PARTICLE_T = _pybsimu.PARTICLE_T
+PARTICLE_X = _pybsimu.PARTICLE_X
+PARTICLE_VX = _pybsimu.PARTICLE_VX
+PARTICLE_Y = _pybsimu.PARTICLE_Y
+PARTICLE_VY = _pybsimu.PARTICLE_VY
+PARTICLE_R = _pybsimu.PARTICLE_R
+PARTICLE_VR = _pybsimu.PARTICLE_VR
+PARTICLE_W = _pybsimu.PARTICLE_W
+PARTICLE_Z = _pybsimu.PARTICLE_Z
+PARTICLE_VZ = _pybsimu.PARTICLE_VZ
+TRAJECTORY_INTERPOLATION_POLYNOMIAL = _pybsimu.TRAJECTORY_INTERPOLATION_POLYNOMIAL
+TRAJECTORY_INTERPOLATION_LINEAR = _pybsimu.TRAJECTORY_INTERPOLATION_LINEAR
+SCHARGE_DEPOSITION_PIC = _pybsimu.SCHARGE_DEPOSITION_PIC
+SCHARGE_DEPOSITION_LINEAR = _pybsimu.SCHARGE_DEPOSITION_LINEAR
+AXIS_X = _pybsimu.AXIS_X
+AXIS_Y = _pybsimu.AXIS_Y
+AXIS_R = _pybsimu.AXIS_R
+AXIS_Z = _pybsimu.AXIS_Z
+DIAG_NONE = _pybsimu.DIAG_NONE
+DIAG_T = _pybsimu.DIAG_T
+DIAG_X = _pybsimu.DIAG_X
+DIAG_VX = _pybsimu.DIAG_VX
+DIAG_Y = _pybsimu.DIAG_Y
+DIAG_R = _pybsimu.DIAG_R
+DIAG_VY = _pybsimu.DIAG_VY
+DIAG_VR = _pybsimu.DIAG_VR
+DIAG_W = _pybsimu.DIAG_W
+DIAG_VTHETA = _pybsimu.DIAG_VTHETA
+DIAG_Z = _pybsimu.DIAG_Z
+DIAG_VZ = _pybsimu.DIAG_VZ
+DIAG_O = _pybsimu.DIAG_O
+DIAG_VO = _pybsimu.DIAG_VO
+DIAG_P = _pybsimu.DIAG_P
+DIAG_VP = _pybsimu.DIAG_VP
+DIAG_Q = _pybsimu.DIAG_Q
+DIAG_VQ = _pybsimu.DIAG_VQ
+DIAG_XP = _pybsimu.DIAG_XP
+DIAG_YP = _pybsimu.DIAG_YP
+DIAG_RP = _pybsimu.DIAG_RP
+DIAG_AP = _pybsimu.DIAG_AP
+DIAG_ZP = _pybsimu.DIAG_ZP
+DIAG_OP = _pybsimu.DIAG_OP
+DIAG_PP = _pybsimu.DIAG_PP
+DIAG_CURR = _pybsimu.DIAG_CURR
+DIAG_EK = _pybsimu.DIAG_EK
+DIAG_QM = _pybsimu.DIAG_QM
+DIAG_CHARGE = _pybsimu.DIAG_CHARGE
+DIAG_MASS = _pybsimu.DIAG_MASS
+DIAG_NO = _pybsimu.DIAG_NO
+VEC3D_HPP = _pybsimu.VEC3D_HPP
+SCALARFIELD_HPP = _pybsimu.SCALARFIELD_HPP
+class ScalarField(Field):
+    __swig_setmethods__ = {}
+    for _s in [Field]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ScalarField, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Field]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, ScalarField, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    __swig_destroy__ = _pybsimu.delete_ScalarField
+    __del__ = lambda self: None
+
+    def __call__(self, x):
+        return _pybsimu.ScalarField___call__(self, x)
+ScalarField_swigregister = _pybsimu.ScalarField_swigregister
+ScalarField_swigregister(ScalarField)
+
+MESHSCALARFIELD_HPP = _pybsimu.MESHSCALARFIELD_HPP
+class MeshScalarField(ScalarField, Mesh):
+    __swig_setmethods__ = {}
+    for _s in [ScalarField, Mesh]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, MeshScalarField, name, value)
+    __swig_getmethods__ = {}
+    for _s in [ScalarField, Mesh]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, MeshScalarField, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _pybsimu.new_MeshScalarField(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _pybsimu.delete_MeshScalarField
+    __del__ = lambda self: None
+
+    def clear(self):
+        return _pybsimu.MeshScalarField_clear(self)
+
+    def reset(self, geom_mode, size, origo, h):
+        return _pybsimu.MeshScalarField_reset(self, geom_mode, size, origo, h)
+
+    def get_minmax(self, min, max):
+        return _pybsimu.MeshScalarField_get_minmax(self, min, max)
+
+    def __iadd__(self, f):
+        return _pybsimu.MeshScalarField___iadd__(self, f)
+
+    def __isub__(self, f):
+        return _pybsimu.MeshScalarField___isub__(self, f)
+
+    def __imul__(self, x):
+        return _pybsimu.MeshScalarField___imul__(self, x)
+
+    def __itruediv__(self, *args):
+        return _pybsimu.MeshScalarField___itruediv__(self, *args)
+    __idiv__ = __itruediv__
+
+
+
+    def __call__(self, *args):
+        return _pybsimu.MeshScalarField___call__(self, *args)
+
+    def save(self, *args):
+        return _pybsimu.MeshScalarField_save(self, *args)
+
+    def debug_print(self, os):
+        return _pybsimu.MeshScalarField_debug_print(self, os)
+MeshScalarField_swigregister = _pybsimu.MeshScalarField_swigregister
+MeshScalarField_swigregister(MeshScalarField)
+
+EPOT_FIELD_HPP = _pybsimu.EPOT_FIELD_HPP
+class EpotField(MeshScalarField):
+    __swig_setmethods__ = {}
+    for _s in [MeshScalarField]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, EpotField, name, value)
+    __swig_getmethods__ = {}
+    for _s in [MeshScalarField]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, EpotField, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _pybsimu.new_EpotField(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _pybsimu.delete_EpotField
+    __del__ = lambda self: None
+
+    def geom(self):
+        return _pybsimu.EpotField_geom(self)
+
+    def __call__(self, *args):
+        return _pybsimu.EpotField___call__(self, *args)
+EpotField_swigregister = _pybsimu.EpotField_swigregister
+EpotField_swigregister(EpotField)
 
 # This file is compatible with both classic and new-style classes.
 
