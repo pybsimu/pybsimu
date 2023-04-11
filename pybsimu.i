@@ -4,6 +4,7 @@
 
 %rename(__str__) operator<<;
 %rename(__getitem__) STLFile::Triangle::operator[];
+%rename(copy) MeshScalarField::operator=;
 %rename(copy) MeshVectorField::operator=;
 %rename(assign) ParticleDataBase::operator=;
 %rename(assign) ParticleDataBase2D::operator=;
@@ -11,8 +12,13 @@
 %rename(assign) ParticleDataBase3D::operator=;
 %rename(assign) Vec3D::operator=;
 %rename(assign) Int3D::operator=;
+%rename(times) operator*(double, const Vec3D&);
+%rename(times) operator*(double, const class Int3D&);
+%rename(times) operator*(double, const Int3D&);
+%rename(times) operator*(int, const Int3D&);
+%rename(times) Int3D::operator*;
 
-// This is in the header but no implementation, not sure what's up with that
+// These are in the header but no implementation, not sure what's up with that
 %ignore Geometry::get_boundaries;
 %ignore STLFile::STLFile(const std::vector<Vec3D>&, const std::vector<VTriangle>&);
 %ignore IBSimu::halt;
@@ -22,6 +28,7 @@
 %ignore trajectory_diagnostic_string_with_unit;
 %ignore trajectory_diagnostic_string_unit;
 
+// Replacing these with x, y, z, in extend blocks later.
 %ignore Vec3D::operator[];
 %ignore Int3D::operator[];
 
@@ -53,37 +60,33 @@
 #include "epot_field.hpp"
 %}
 
-class Vec3D {
-public:
-    %extend {
-        double x() {
-            return $self->operator[](0);
-        }
-        double y() {
-            return $self->operator[](1);
-        }
-        double z() {
-            return $self->operator[](2);
-        }
+%include "vec3d.hpp"
+
+%extend Vec3D {
+    double x() {
+        return $self->operator[](0);
+    }
+    double y() {
+        return $self->operator[](1);
+    }
+    double z() {
+        return $self->operator[](2);
     }
 };
 
-class Int3D {
-public:
-    %extend {
-        double x() {
-            return $self->operator[](0);
-        }
-        double y() {
-            return $self->operator[](1);
-        }
-        double z() {
-            return $self->operator[](2);
-        }
+%extend Int3D {
+    double x() {
+        return $self->operator[](0);
+    }
+    double y() {
+        return $self->operator[](1);
+    }
+    double z() {
+        return $self->operator[](2);
     }
 };
 
-
+%include "stdint.i"
 %include "mesh.hpp"
 %include "geometry.hpp"
 %include "solid.hpp"
@@ -105,7 +108,6 @@ public:
 %include "geomplot.hpp"
 %include "geomplotter.hpp"
 %include "types.hpp"
-%include "vec3d.hpp"
 %include "scalarfield.hpp"
 %include "meshscalarfield.hpp"
 %include "epot_field.hpp"
