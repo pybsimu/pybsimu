@@ -95,12 +95,89 @@ except __builtin__.Exception:
         pass
     _newclass = 0
 
+VEC3D_HPP = _pybsimu.VEC3D_HPP
 class Vec3D(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, Vec3D, name, value)
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, Vec3D, name)
     __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _pybsimu.new_Vec3D(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _pybsimu.delete_Vec3D
+    __del__ = lambda self: None
+
+    def __call__(self, *args):
+        return _pybsimu.Vec3D___call__(self, *args)
+
+    def __add__(self, vec):
+        return _pybsimu.Vec3D___add__(self, vec)
+
+    def __sub__(self, vec):
+        return _pybsimu.Vec3D___sub__(self, vec)
+
+    def __iadd__(self, vec):
+        return _pybsimu.Vec3D___iadd__(self, vec)
+
+    def __mul__(self, *args):
+        return _pybsimu.Vec3D___mul__(self, *args)
+
+    def __neg__(self):
+        return _pybsimu.Vec3D___neg__(self)
+
+    def __imul__(self, x):
+        return _pybsimu.Vec3D___imul__(self, x)
+
+    def __itruediv__(self, *args):
+        return _pybsimu.Vec3D___itruediv__(self, *args)
+    __idiv__ = __itruediv__
+
+
+
+    def __ne__(self, x):
+        return _pybsimu.Vec3D___ne__(self, x)
+
+    def __eq__(self, x):
+        return _pybsimu.Vec3D___eq__(self, x)
+
+    def approx(self, x, eps=1.0e-6):
+        return _pybsimu.Vec3D_approx(self, x, eps)
+
+    def assign(self, *args):
+        return _pybsimu.Vec3D_assign(self, *args)
+
+    def abs(self):
+        return _pybsimu.Vec3D_abs(self)
+
+    def normalize(self):
+        return _pybsimu.Vec3D_normalize(self)
+
+    def norm2(self):
+        return _pybsimu.Vec3D_norm2(self)
+
+    def max(self):
+        return _pybsimu.Vec3D_max(self)
+
+    def ssqr(self):
+        return _pybsimu.Vec3D_ssqr(self)
+
+    def min_element(self):
+        return _pybsimu.Vec3D_min_element(self)
+
+    def arb_perpendicular(self):
+        return _pybsimu.Vec3D_arb_perpendicular(self)
+
+    def save(self, os):
+        return _pybsimu.Vec3D_save(self, os)
+    if _newclass:
+        standard_basis = staticmethod(_pybsimu.Vec3D_standard_basis)
+    else:
+        standard_basis = _pybsimu.Vec3D_standard_basis
 
     def x(self):
         return _pybsimu.Vec3D_x(self)
@@ -110,17 +187,24 @@ class Vec3D(_object):
 
     def z(self):
         return _pybsimu.Vec3D_z(self)
-
-    def __init__(self):
-        this = _pybsimu.new_Vec3D()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _pybsimu.delete_Vec3D
-    __del__ = lambda self: None
 Vec3D_swigregister = _pybsimu.Vec3D_swigregister
 Vec3D_swigregister(Vec3D)
+
+def Vec3D_standard_basis(i):
+    return _pybsimu.Vec3D_standard_basis(i)
+Vec3D_standard_basis = _pybsimu.Vec3D_standard_basis
+
+def cross(vec1, vec2):
+    return _pybsimu.cross(vec1, vec2)
+cross = _pybsimu.cross
+
+def norm2(vec):
+    return _pybsimu.norm2(vec)
+norm2 = _pybsimu.norm2
+
+def ssqr(vec):
+    return _pybsimu.ssqr(vec)
+ssqr = _pybsimu.ssqr
 
 class Int3D(_object):
     __swig_setmethods__ = {}
@@ -128,6 +212,39 @@ class Int3D(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, Int3D, name)
     __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _pybsimu.new_Int3D(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _pybsimu.delete_Int3D
+    __del__ = lambda self: None
+
+    def __call__(self, *args):
+        return _pybsimu.Int3D___call__(self, *args)
+
+    def __add__(self, i):
+        return _pybsimu.Int3D___add__(self, i)
+
+    def __sub__(self, i):
+        return _pybsimu.Int3D___sub__(self, i)
+
+    def times(self, *args):
+        return _pybsimu.Int3D_times(self, *args)
+
+    def __ne__(self, i):
+        return _pybsimu.Int3D___ne__(self, i)
+
+    def __eq__(self, i):
+        return _pybsimu.Int3D___eq__(self, i)
+
+    def max(self):
+        return _pybsimu.Int3D_max(self)
+
+    def save(self, s):
+        return _pybsimu.Int3D_save(self, s)
 
     def x(self):
         return _pybsimu.Int3D_x(self)
@@ -137,17 +254,12 @@ class Int3D(_object):
 
     def z(self):
         return _pybsimu.Int3D_z(self)
-
-    def __init__(self):
-        this = _pybsimu.new_Int3D()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _pybsimu.delete_Int3D
-    __del__ = lambda self: None
 Int3D_swigregister = _pybsimu.Int3D_swigregister
 Int3D_swigregister(Int3D)
+
+def times(*args):
+    return _pybsimu.times(*args)
+times = _pybsimu.times
 
 MESH_HPP = _pybsimu.MESH_HPP
 class Mesh(_object):
@@ -249,6 +361,10 @@ class Bound(_object):
     __del__ = lambda self: None
 Bound_swigregister = _pybsimu.Bound_swigregister
 Bound_swigregister(Bound)
+
+def __str__(*args):
+    return _pybsimu.__str__(*args)
+__str__ = _pybsimu.__str__
 
 SMESH_NODE_ID_MASK = _pybsimu.SMESH_NODE_ID_MASK
 SMESH_NODE_ID_PURE_VACUUM = _pybsimu.SMESH_NODE_ID_PURE_VACUUM
@@ -1985,7 +2101,6 @@ DIAG_QM = _pybsimu.DIAG_QM
 DIAG_CHARGE = _pybsimu.DIAG_CHARGE
 DIAG_MASS = _pybsimu.DIAG_MASS
 DIAG_NO = _pybsimu.DIAG_NO
-VEC3D_HPP = _pybsimu.VEC3D_HPP
 SCALARFIELD_HPP = _pybsimu.SCALARFIELD_HPP
 class ScalarField(Field):
     __swig_setmethods__ = {}
@@ -2037,6 +2152,9 @@ class MeshScalarField(ScalarField, Mesh):
 
     def get_minmax(self, min, max):
         return _pybsimu.MeshScalarField_get_minmax(self, min, max)
+
+    def copy(self, f):
+        return _pybsimu.MeshScalarField_copy(self, f)
 
     def __iadd__(self, f):
         return _pybsimu.MeshScalarField___iadd__(self, f)
