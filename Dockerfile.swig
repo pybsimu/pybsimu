@@ -14,7 +14,8 @@ RUN apt-get update &&\
     curl \
     swig3.0 \
     python3 \
-    python3-dev
+    python3-dev \
+    python3-pip
 
 RUN adduser --gecos "" --disabled-password $username && \
     chpasswd <<<"$username:$password" &&   usermod -aG sudo ubuntu &&   su - ubuntu && \
