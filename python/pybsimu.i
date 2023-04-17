@@ -60,6 +60,7 @@
 #include "scalarfield.hpp"
 #include "meshscalarfield.hpp"
 #include "epot_field.hpp"
+#include "gtkplotter.hpp"
 #include <functional>
 %}
 
@@ -114,6 +115,17 @@
 %include "meshscalarfield.hpp"
 %include "epot_field.hpp"
 %include "epot_efield.hpp"
+
+%include "typemaps.i"
+%typemap(in) int * ($*1_type temp1) {
+    temp1 = PyInt_AsLong($input);
+    $1 = &temp1;
+}
+%typemap(in) char *** ($*1_type temp1) {
+    $1 = &temp1;
+}
+
+%include "gtkplotter.hpp"
 
 %extend EpotEfield {
     void set_extrapolation(PyObject* e1, PyObject* e2, PyObject* e3, PyObject* e4, PyObject* e5, PyObject* e6) {

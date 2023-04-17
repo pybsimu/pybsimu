@@ -2221,6 +2221,97 @@ class EpotEfield(VectorField):
 EpotEfield_swigregister = _pybsimu.EpotEfield_swigregister
 EpotEfield_swigregister(EpotEfield)
 
+GTKPLOTTER_HPP = _pybsimu.GTKPLOTTER_HPP
+class GTKPlotter(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, GTKPlotter, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, GTKPlotter, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, argc, argv):
+        this = _pybsimu.new_GTKPlotter(argc, argv)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _pybsimu.delete_GTKPlotter
+    __del__ = lambda self: None
+
+    def run(self):
+        return _pybsimu.GTKPlotter_run(self)
+
+    def get_surface_triangle_data(self):
+        return _pybsimu.GTKPlotter_get_surface_triangle_data(self)
+
+    def get_geometry(self):
+        return _pybsimu.GTKPlotter_get_geometry(self)
+
+    def get_epot(self):
+        return _pybsimu.GTKPlotter_get_epot(self)
+
+    def get_efield(self):
+        return _pybsimu.GTKPlotter_get_efield(self)
+
+    def get_scharge(self):
+        return _pybsimu.GTKPlotter_get_scharge(self)
+
+    def get_trajdens(self):
+        return _pybsimu.GTKPlotter_get_trajdens(self)
+
+    def get_bfield(self):
+        return _pybsimu.GTKPlotter_get_bfield(self)
+
+    def get_particledatabase(self):
+        return _pybsimu.GTKPlotter_get_particledatabase(self)
+
+    def set_surface_triangle_data(self, data):
+        return _pybsimu.GTKPlotter_set_surface_triangle_data(self, data)
+
+    def set_geometry(self, geom):
+        return _pybsimu.GTKPlotter_set_geometry(self, geom)
+
+    def set_epot(self, epot):
+        return _pybsimu.GTKPlotter_set_epot(self, epot)
+
+    def set_efield(self, efield):
+        return _pybsimu.GTKPlotter_set_efield(self, efield)
+
+    def set_scharge(self, scharge):
+        return _pybsimu.GTKPlotter_set_scharge(self, scharge)
+
+    def set_trajdens(self, tdens):
+        return _pybsimu.GTKPlotter_set_trajdens(self, tdens)
+
+    def set_bfield(self, bfield):
+        return _pybsimu.GTKPlotter_set_bfield(self, bfield)
+
+    def set_particledatabase(self, pdb):
+        return _pybsimu.GTKPlotter_set_particledatabase(self, pdb)
+
+    def opengl(self):
+        return _pybsimu.GTKPlotter_opengl(self)
+
+    def force_software_renderer(self):
+        return _pybsimu.GTKPlotter_force_software_renderer(self)
+
+    def new_geometry_3d_plot_window(self):
+        return _pybsimu.GTKPlotter_new_geometry_3d_plot_window(self)
+
+    def new_geometry_plot_window(self):
+        return _pybsimu.GTKPlotter_new_geometry_plot_window(self)
+
+    def new_particle_plot_window(self, axis, level, type, diagx, diagy):
+        return _pybsimu.GTKPlotter_new_particle_plot_window(self, axis, level, type, diagx, diagy)
+
+    def new_field_plot_window(self, N, x1, x2, diag, loc):
+        return _pybsimu.GTKPlotter_new_field_plot_window(self, N, x1, x2, diag, loc)
+
+    def delete_window(self, window):
+        return _pybsimu.GTKPlotter_delete_window(self, window)
+GTKPlotter_swigregister = _pybsimu.GTKPlotter_swigregister
+GTKPlotter_swigregister(GTKPlotter)
+
 
 def __bddd_0(x, y, z):
     return _pybsimu.__bddd_0(x, y, z)

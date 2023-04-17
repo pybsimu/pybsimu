@@ -3492,76 +3492,81 @@ namespace Swig {
 #define SWIGTYPE_p_FieldGraph swig_types[22]
 #define SWIGTYPE_p_Frame swig_types[23]
 #define SWIGTYPE_p_FuncSolid swig_types[24]
-#define SWIGTYPE_p_GeomPlot swig_types[25]
-#define SWIGTYPE_p_GeomPlotter swig_types[26]
-#define SWIGTYPE_p_Geometry swig_types[27]
-#define SWIGTYPE_p_IBSimu swig_types[28]
-#define SWIGTYPE_p_InitialPlasma swig_types[29]
-#define SWIGTYPE_p_Int3D swig_types[30]
-#define SWIGTYPE_p_Mesh swig_types[31]
-#define SWIGTYPE_p_MeshScalarField swig_types[32]
-#define SWIGTYPE_p_MeshVectorField swig_types[33]
-#define SWIGTYPE_p_NPlasmaBfieldSuppression swig_types[34]
-#define SWIGTYPE_p_PPlasmaBfieldSuppression swig_types[35]
-#define SWIGTYPE_p_Particle2D swig_types[36]
-#define SWIGTYPE_p_Particle3D swig_types[37]
-#define SWIGTYPE_p_ParticleBase swig_types[38]
-#define SWIGTYPE_p_ParticleCyl swig_types[39]
-#define SWIGTYPE_p_ParticleDataBase swig_types[40]
-#define SWIGTYPE_p_ParticleDataBase2D swig_types[41]
-#define SWIGTYPE_p_ParticleDataBase3D swig_types[42]
-#define SWIGTYPE_p_ParticleDataBaseCyl swig_types[43]
-#define SWIGTYPE_p_ParticleP2D swig_types[44]
-#define SWIGTYPE_p_ParticleP3D swig_types[45]
-#define SWIGTYPE_p_ParticlePBase swig_types[46]
-#define SWIGTYPE_p_ParticlePCyl swig_types[47]
-#define SWIGTYPE_p_ParticleStatistics swig_types[48]
-#define SWIGTYPE_p_Plotter swig_types[49]
-#define SWIGTYPE_p_Precond swig_types[50]
-#define SWIGTYPE_p_STLFile swig_types[51]
-#define SWIGTYPE_p_STLSolid swig_types[52]
-#define SWIGTYPE_p_ScalarField swig_types[53]
-#define SWIGTYPE_p_SignalHandler swig_types[54]
-#define SWIGTYPE_p_Solid swig_types[55]
-#define SWIGTYPE_p_TrajectoryDiagnosticData swig_types[56]
-#define SWIGTYPE_p_TrajectoryEndCallback swig_types[57]
-#define SWIGTYPE_p_TrajectoryHandlerCallback swig_types[58]
-#define SWIGTYPE_p_TrajectorySurfaceCollisionCallback swig_types[59]
-#define SWIGTYPE_p_Transformation swig_types[60]
-#define SWIGTYPE_p_VTriangle swig_types[61]
-#define SWIGTYPE_p_Vec3D swig_types[62]
-#define SWIGTYPE_p_Vec4D swig_types[63]
-#define SWIGTYPE_p_VectorField swig_types[64]
-#define SWIGTYPE_p_bool swig_types[65]
-#define SWIGTYPE_p_char swig_types[66]
-#define SWIGTYPE_p_double swig_types[67]
-#define SWIGTYPE_p_f_double_double_double__bool swig_types[68]
-#define SWIGTYPE_p_f_void__void swig_types[69]
-#define SWIGTYPE_p_field_extrpl_e swig_types[70]
-#define SWIGTYPE_p_field_type_e swig_types[71]
-#define SWIGTYPE_p_int swig_types[72]
-#define SWIGTYPE_p_long_long swig_types[73]
-#define SWIGTYPE_p_op_bool_double_double_double swig_types[74]
-#define SWIGTYPE_p_short swig_types[75]
-#define SWIGTYPE_p_siginfo_t swig_types[76]
-#define SWIGTYPE_p_signed_char swig_types[77]
-#define SWIGTYPE_p_std__basic_ostreamT_wchar_t_t swig_types[78]
-#define SWIGTYPE_p_std__istream swig_types[79]
-#define SWIGTYPE_p_std__ostream swig_types[80]
-#define SWIGTYPE_p_std__vectorT_Particle2D_t swig_types[81]
-#define SWIGTYPE_p_std__vectorT_Particle3D_t swig_types[82]
-#define SWIGTYPE_p_std__vectorT_ParticleCyl_t swig_types[83]
-#define SWIGTYPE_p_std__vectorT_bool_fpFfdouble_double_doubleF_t swig_types[84]
-#define SWIGTYPE_p_std__vectorT_double_t swig_types[85]
-#define SWIGTYPE_p_std__vectorT_std__functionT_bool_fdouble_double_doubleF_t_t swig_types[86]
-#define SWIGTYPE_p_std__vectorT_trajectory_diagnostic_e_t swig_types[87]
-#define SWIGTYPE_p_unsigned_char swig_types[88]
-#define SWIGTYPE_p_unsigned_int swig_types[89]
-#define SWIGTYPE_p_unsigned_long_long swig_types[90]
-#define SWIGTYPE_p_unsigned_short swig_types[91]
-#define SWIGTYPE_p_view_e swig_types[92]
-static swig_type_info *swig_types[94];
-static swig_module_info swig_module = {swig_types, 93, 0, 0, 0, 0};
+#define SWIGTYPE_p_GTKPlotter swig_types[25]
+#define SWIGTYPE_p_GTKWindow swig_types[26]
+#define SWIGTYPE_p_GeomPlot swig_types[27]
+#define SWIGTYPE_p_GeomPlotter swig_types[28]
+#define SWIGTYPE_p_Geometry swig_types[29]
+#define SWIGTYPE_p_IBSimu swig_types[30]
+#define SWIGTYPE_p_InitialPlasma swig_types[31]
+#define SWIGTYPE_p_Int3D swig_types[32]
+#define SWIGTYPE_p_Mesh swig_types[33]
+#define SWIGTYPE_p_MeshScalarField swig_types[34]
+#define SWIGTYPE_p_MeshVectorField swig_types[35]
+#define SWIGTYPE_p_NPlasmaBfieldSuppression swig_types[36]
+#define SWIGTYPE_p_PPlasmaBfieldSuppression swig_types[37]
+#define SWIGTYPE_p_Particle2D swig_types[38]
+#define SWIGTYPE_p_Particle3D swig_types[39]
+#define SWIGTYPE_p_ParticleBase swig_types[40]
+#define SWIGTYPE_p_ParticleCyl swig_types[41]
+#define SWIGTYPE_p_ParticleDataBase swig_types[42]
+#define SWIGTYPE_p_ParticleDataBase2D swig_types[43]
+#define SWIGTYPE_p_ParticleDataBase3D swig_types[44]
+#define SWIGTYPE_p_ParticleDataBaseCyl swig_types[45]
+#define SWIGTYPE_p_ParticleP2D swig_types[46]
+#define SWIGTYPE_p_ParticleP3D swig_types[47]
+#define SWIGTYPE_p_ParticlePBase swig_types[48]
+#define SWIGTYPE_p_ParticlePCyl swig_types[49]
+#define SWIGTYPE_p_ParticleStatistics swig_types[50]
+#define SWIGTYPE_p_Plotter swig_types[51]
+#define SWIGTYPE_p_Precond swig_types[52]
+#define SWIGTYPE_p_STLFile swig_types[53]
+#define SWIGTYPE_p_STLSolid swig_types[54]
+#define SWIGTYPE_p_ScalarField swig_types[55]
+#define SWIGTYPE_p_SignalHandler swig_types[56]
+#define SWIGTYPE_p_Solid swig_types[57]
+#define SWIGTYPE_p_TrajectoryDiagnosticData swig_types[58]
+#define SWIGTYPE_p_TrajectoryEndCallback swig_types[59]
+#define SWIGTYPE_p_TrajectoryHandlerCallback swig_types[60]
+#define SWIGTYPE_p_TrajectorySurfaceCollisionCallback swig_types[61]
+#define SWIGTYPE_p_Transformation swig_types[62]
+#define SWIGTYPE_p_VTriangle swig_types[63]
+#define SWIGTYPE_p_Vec3D swig_types[64]
+#define SWIGTYPE_p_Vec4D swig_types[65]
+#define SWIGTYPE_p_VectorField swig_types[66]
+#define SWIGTYPE_p_bool swig_types[67]
+#define SWIGTYPE_p_char swig_types[68]
+#define SWIGTYPE_p_double swig_types[69]
+#define SWIGTYPE_p_f_double_double_double__bool swig_types[70]
+#define SWIGTYPE_p_f_void__void swig_types[71]
+#define SWIGTYPE_p_field_extrpl_e swig_types[72]
+#define SWIGTYPE_p_field_loc_type_e swig_types[73]
+#define SWIGTYPE_p_field_type_e swig_types[74]
+#define SWIGTYPE_p_int swig_types[75]
+#define SWIGTYPE_p_long_long swig_types[76]
+#define SWIGTYPE_p_op_bool_double_double_double swig_types[77]
+#define SWIGTYPE_p_p_p_char swig_types[78]
+#define SWIGTYPE_p_particle_diag_plot_type_e swig_types[79]
+#define SWIGTYPE_p_short swig_types[80]
+#define SWIGTYPE_p_siginfo_t swig_types[81]
+#define SWIGTYPE_p_signed_char swig_types[82]
+#define SWIGTYPE_p_std__basic_ostreamT_wchar_t_t swig_types[83]
+#define SWIGTYPE_p_std__istream swig_types[84]
+#define SWIGTYPE_p_std__ostream swig_types[85]
+#define SWIGTYPE_p_std__vectorT_Particle2D_t swig_types[86]
+#define SWIGTYPE_p_std__vectorT_Particle3D_t swig_types[87]
+#define SWIGTYPE_p_std__vectorT_ParticleCyl_t swig_types[88]
+#define SWIGTYPE_p_std__vectorT_bool_fpFfdouble_double_doubleF_t swig_types[89]
+#define SWIGTYPE_p_std__vectorT_double_t swig_types[90]
+#define SWIGTYPE_p_std__vectorT_std__functionT_bool_fdouble_double_doubleF_t_t swig_types[91]
+#define SWIGTYPE_p_std__vectorT_trajectory_diagnostic_e_t swig_types[92]
+#define SWIGTYPE_p_unsigned_char swig_types[93]
+#define SWIGTYPE_p_unsigned_int swig_types[94]
+#define SWIGTYPE_p_unsigned_long_long swig_types[95]
+#define SWIGTYPE_p_unsigned_short swig_types[96]
+#define SWIGTYPE_p_view_e swig_types[97]
+static swig_type_info *swig_types[99];
+static swig_module_info swig_module = {swig_types, 98, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3694,6 +3699,7 @@ namespace swig {
 #include "scalarfield.hpp"
 #include "meshscalarfield.hpp"
 #include "epot_field.hpp"
+#include "gtkplotter.hpp"
 #include <functional>
 
 
@@ -32526,6 +32532,866 @@ SWIGINTERN PyObject *EpotEfield_swigregister(PyObject *SWIGUNUSEDPARM(self), PyO
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_new_GTKPlotter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  int *arg1 = (int *) 0 ;
+  char ***arg2 = (char ***) 0 ;
+  int temp11 ;
+  char **temp12 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  GTKPlotter *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:new_GTKPlotter",&obj0,&obj1)) SWIG_fail;
+  {
+    temp11 = PyInt_AsLong(obj0);
+    arg1 = &temp11;
+  }
+  {
+    arg2 = &temp12;
+  }
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (GTKPlotter *)new GTKPlotter(arg1,arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GTKPlotter, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_GTKPlotter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_GTKPlotter",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_GTKPlotter" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    delete arg1;
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_run(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_run",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_run" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    (arg1)->run();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_get_surface_triangle_data(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< double > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_get_surface_triangle_data",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_get_surface_triangle_data" "', argument " "1"" of type '" "GTKPlotter const *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (std::vector< double > *)((GTKPlotter const *)arg1)->get_surface_triangle_data();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_double_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_get_geometry(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  Geometry *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_get_geometry",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_get_geometry" "', argument " "1"" of type '" "GTKPlotter const *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (Geometry *)((GTKPlotter const *)arg1)->get_geometry();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Geometry, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_get_epot(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  EpotField *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_get_epot",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_get_epot" "', argument " "1"" of type '" "GTKPlotter const *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (EpotField *)((GTKPlotter const *)arg1)->get_epot();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_EpotField, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_get_efield(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  EpotEfield *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_get_efield",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_get_efield" "', argument " "1"" of type '" "GTKPlotter const *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (EpotEfield *)((GTKPlotter const *)arg1)->get_efield();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_EpotEfield, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_get_scharge(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  MeshScalarField *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_get_scharge",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_get_scharge" "', argument " "1"" of type '" "GTKPlotter const *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (MeshScalarField *)((GTKPlotter const *)arg1)->get_scharge();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_MeshScalarField, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_get_trajdens(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  MeshScalarField *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_get_trajdens",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_get_trajdens" "', argument " "1"" of type '" "GTKPlotter const *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (MeshScalarField *)((GTKPlotter const *)arg1)->get_trajdens();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_MeshScalarField, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_get_bfield(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  VectorField *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_get_bfield",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_get_bfield" "', argument " "1"" of type '" "GTKPlotter const *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (VectorField *)((GTKPlotter const *)arg1)->get_bfield();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_VectorField, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_get_particledatabase(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  ParticleDataBase *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_get_particledatabase",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_get_particledatabase" "', argument " "1"" of type '" "GTKPlotter const *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (ParticleDataBase *)((GTKPlotter const *)arg1)->get_particledatabase();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ParticleDataBase, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_set_surface_triangle_data(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  std::vector< double > *arg2 = (std::vector< double > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:GTKPlotter_set_surface_triangle_data",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_set_surface_triangle_data" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_std__vectorT_double_t, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GTKPlotter_set_surface_triangle_data" "', argument " "2"" of type '" "std::vector< double > const *""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< double > * >(argp2);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    (arg1)->set_surface_triangle_data((std::vector< double > const *)arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_set_geometry(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  Geometry *arg2 = (Geometry *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:GTKPlotter_set_geometry",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_set_geometry" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_Geometry, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GTKPlotter_set_geometry" "', argument " "2"" of type '" "Geometry const *""'"); 
+  }
+  arg2 = reinterpret_cast< Geometry * >(argp2);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    (arg1)->set_geometry((Geometry const *)arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_set_epot(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  EpotField *arg2 = (EpotField *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:GTKPlotter_set_epot",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_set_epot" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_EpotField, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GTKPlotter_set_epot" "', argument " "2"" of type '" "EpotField const *""'"); 
+  }
+  arg2 = reinterpret_cast< EpotField * >(argp2);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    (arg1)->set_epot((EpotField const *)arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_set_efield(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  EpotEfield *arg2 = (EpotEfield *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:GTKPlotter_set_efield",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_set_efield" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_EpotEfield, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GTKPlotter_set_efield" "', argument " "2"" of type '" "EpotEfield const *""'"); 
+  }
+  arg2 = reinterpret_cast< EpotEfield * >(argp2);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    (arg1)->set_efield((EpotEfield const *)arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_set_scharge(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  MeshScalarField *arg2 = (MeshScalarField *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:GTKPlotter_set_scharge",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_set_scharge" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_MeshScalarField, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GTKPlotter_set_scharge" "', argument " "2"" of type '" "MeshScalarField const *""'"); 
+  }
+  arg2 = reinterpret_cast< MeshScalarField * >(argp2);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    (arg1)->set_scharge((MeshScalarField const *)arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_set_trajdens(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  MeshScalarField *arg2 = (MeshScalarField *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:GTKPlotter_set_trajdens",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_set_trajdens" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_MeshScalarField, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GTKPlotter_set_trajdens" "', argument " "2"" of type '" "MeshScalarField const *""'"); 
+  }
+  arg2 = reinterpret_cast< MeshScalarField * >(argp2);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    (arg1)->set_trajdens((MeshScalarField const *)arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_set_bfield(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  VectorField *arg2 = (VectorField *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:GTKPlotter_set_bfield",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_set_bfield" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_VectorField, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GTKPlotter_set_bfield" "', argument " "2"" of type '" "VectorField const *""'"); 
+  }
+  arg2 = reinterpret_cast< VectorField * >(argp2);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    (arg1)->set_bfield((VectorField const *)arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_set_particledatabase(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  ParticleDataBase *arg2 = (ParticleDataBase *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:GTKPlotter_set_particledatabase",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_set_particledatabase" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_ParticleDataBase, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GTKPlotter_set_particledatabase" "', argument " "2"" of type '" "ParticleDataBase const *""'"); 
+  }
+  arg2 = reinterpret_cast< ParticleDataBase * >(argp2);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    (arg1)->set_particledatabase((ParticleDataBase const *)arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_opengl(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_opengl",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_opengl" "', argument " "1"" of type '" "GTKPlotter const *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (bool)((GTKPlotter const *)arg1)->opengl();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_force_software_renderer(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_force_software_renderer",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_force_software_renderer" "', argument " "1"" of type '" "GTKPlotter const *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    ((GTKPlotter const *)arg1)->force_software_renderer();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_new_geometry_3d_plot_window(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  GTKWindow *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_new_geometry_3d_plot_window",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_new_geometry_3d_plot_window" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (GTKWindow *)(arg1)->new_geometry_3d_plot_window();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GTKWindow, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_new_geometry_plot_window(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  GTKWindow *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:GTKPlotter_new_geometry_plot_window",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_new_geometry_plot_window" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (GTKWindow *)(arg1)->new_geometry_plot_window();
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GTKWindow, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_new_particle_plot_window(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  coordinate_axis_e arg2 ;
+  double arg3 ;
+  particle_diag_plot_type_e arg4 ;
+  trajectory_diagnostic_e arg5 ;
+  trajectory_diagnostic_e arg6 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  void *argp4 ;
+  int res4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  int val6 ;
+  int ecode6 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  PyObject * obj4 = 0 ;
+  PyObject * obj5 = 0 ;
+  GTKWindow *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOOOO:GTKPlotter_new_particle_plot_window",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_new_particle_plot_window" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GTKPlotter_new_particle_plot_window" "', argument " "2"" of type '" "coordinate_axis_e""'");
+  } 
+  arg2 = static_cast< coordinate_axis_e >(val2);
+  ecode3 = SWIG_AsVal_double(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "GTKPlotter_new_particle_plot_window" "', argument " "3"" of type '" "double""'");
+  } 
+  arg3 = static_cast< double >(val3);
+  {
+    res4 = SWIG_ConvertPtr(obj3, &argp4, SWIGTYPE_p_particle_diag_plot_type_e,  0  | 0);
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "GTKPlotter_new_particle_plot_window" "', argument " "4"" of type '" "particle_diag_plot_type_e""'"); 
+    }  
+    if (!argp4) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GTKPlotter_new_particle_plot_window" "', argument " "4"" of type '" "particle_diag_plot_type_e""'");
+    } else {
+      particle_diag_plot_type_e * temp = reinterpret_cast< particle_diag_plot_type_e * >(argp4);
+      arg4 = *temp;
+      if (SWIG_IsNewObj(res4)) delete temp;
+    }
+  }
+  ecode5 = SWIG_AsVal_int(obj4, &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "GTKPlotter_new_particle_plot_window" "', argument " "5"" of type '" "trajectory_diagnostic_e""'");
+  } 
+  arg5 = static_cast< trajectory_diagnostic_e >(val5);
+  ecode6 = SWIG_AsVal_int(obj5, &val6);
+  if (!SWIG_IsOK(ecode6)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "GTKPlotter_new_particle_plot_window" "', argument " "6"" of type '" "trajectory_diagnostic_e""'");
+  } 
+  arg6 = static_cast< trajectory_diagnostic_e >(val6);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (GTKWindow *)(arg1)->new_particle_plot_window(arg2,arg3,arg4,arg5,arg6);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GTKWindow, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_new_field_plot_window(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  size_t arg2 ;
+  Vec3D *arg3 = 0 ;
+  Vec3D *arg4 = 0 ;
+  field_diag_type_e *arg5 ;
+  field_loc_type_e *arg6 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  void *argp5 = 0 ;
+  int res5 = 0 ;
+  void *argp6 = 0 ;
+  int res6 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  PyObject * obj4 = 0 ;
+  PyObject * obj5 = 0 ;
+  GTKWindow *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOOOO:GTKPlotter_new_field_plot_window",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_new_field_plot_window" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GTKPlotter_new_field_plot_window" "', argument " "2"" of type '" "size_t""'");
+  } 
+  arg2 = static_cast< size_t >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_Vec3D,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GTKPlotter_new_field_plot_window" "', argument " "3"" of type '" "Vec3D const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GTKPlotter_new_field_plot_window" "', argument " "3"" of type '" "Vec3D const &""'"); 
+  }
+  arg3 = reinterpret_cast< Vec3D * >(argp3);
+  res4 = SWIG_ConvertPtr(obj3, &argp4, SWIGTYPE_p_Vec3D,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "GTKPlotter_new_field_plot_window" "', argument " "4"" of type '" "Vec3D const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GTKPlotter_new_field_plot_window" "', argument " "4"" of type '" "Vec3D const &""'"); 
+  }
+  arg4 = reinterpret_cast< Vec3D * >(argp4);
+  res5 = SWIG_ConvertPtr(obj4, &argp5,SWIGTYPE_p_field_type_e, 0 |  0 );
+  if (!SWIG_IsOK(res5)) {
+    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "GTKPlotter_new_field_plot_window" "', argument " "5"" of type '" "field_diag_type_e const [2]""'"); 
+  } 
+  arg5 = reinterpret_cast< field_diag_type_e * >(argp5);
+  res6 = SWIG_ConvertPtr(obj5, &argp6,SWIGTYPE_p_field_loc_type_e, 0 |  0 );
+  if (!SWIG_IsOK(res6)) {
+    SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "GTKPlotter_new_field_plot_window" "', argument " "6"" of type '" "field_loc_type_e const [2]""'"); 
+  } 
+  arg6 = reinterpret_cast< field_loc_type_e * >(argp6);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = (GTKWindow *)(arg1)->new_field_plot_window(arg2,(Vec3D const &)*arg3,(Vec3D const &)*arg4,(field_diag_type_e const (*))arg5,(field_loc_type_e const (*))arg6);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GTKWindow, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_GTKPlotter_delete_window(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GTKPlotter *arg1 = (GTKPlotter *) 0 ;
+  GTKWindow *arg2 = (GTKWindow *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:GTKPlotter_delete_window",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GTKPlotter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GTKPlotter_delete_window" "', argument " "1"" of type '" "GTKPlotter *""'"); 
+  }
+  arg1 = reinterpret_cast< GTKPlotter * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_GTKWindow, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GTKPlotter_delete_window" "', argument " "2"" of type '" "GTKWindow *""'"); 
+  }
+  arg2 = reinterpret_cast< GTKWindow * >(argp2);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    (arg1)->delete_window(arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *GTKPlotter_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_GTKPlotter, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
 SWIGINTERN int Swig_var_MAX_BDDDPTR_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable MAX_BDDDPTR is read-only.");
   return 1;
@@ -37696,6 +38562,33 @@ static PyMethodDef SwigMethods[] = {
 	 { "EpotEfield_debug_print", _wrap_EpotEfield_debug_print, METH_VARARGS, NULL},
 	 { "EpotEfield_set_extrapolation", _wrap_EpotEfield_set_extrapolation, METH_VARARGS, NULL},
 	 { "EpotEfield_swigregister", EpotEfield_swigregister, METH_VARARGS, NULL},
+	 { "new_GTKPlotter", _wrap_new_GTKPlotter, METH_VARARGS, NULL},
+	 { "delete_GTKPlotter", _wrap_delete_GTKPlotter, METH_VARARGS, NULL},
+	 { "GTKPlotter_run", _wrap_GTKPlotter_run, METH_VARARGS, NULL},
+	 { "GTKPlotter_get_surface_triangle_data", _wrap_GTKPlotter_get_surface_triangle_data, METH_VARARGS, NULL},
+	 { "GTKPlotter_get_geometry", _wrap_GTKPlotter_get_geometry, METH_VARARGS, NULL},
+	 { "GTKPlotter_get_epot", _wrap_GTKPlotter_get_epot, METH_VARARGS, NULL},
+	 { "GTKPlotter_get_efield", _wrap_GTKPlotter_get_efield, METH_VARARGS, NULL},
+	 { "GTKPlotter_get_scharge", _wrap_GTKPlotter_get_scharge, METH_VARARGS, NULL},
+	 { "GTKPlotter_get_trajdens", _wrap_GTKPlotter_get_trajdens, METH_VARARGS, NULL},
+	 { "GTKPlotter_get_bfield", _wrap_GTKPlotter_get_bfield, METH_VARARGS, NULL},
+	 { "GTKPlotter_get_particledatabase", _wrap_GTKPlotter_get_particledatabase, METH_VARARGS, NULL},
+	 { "GTKPlotter_set_surface_triangle_data", _wrap_GTKPlotter_set_surface_triangle_data, METH_VARARGS, NULL},
+	 { "GTKPlotter_set_geometry", _wrap_GTKPlotter_set_geometry, METH_VARARGS, NULL},
+	 { "GTKPlotter_set_epot", _wrap_GTKPlotter_set_epot, METH_VARARGS, NULL},
+	 { "GTKPlotter_set_efield", _wrap_GTKPlotter_set_efield, METH_VARARGS, NULL},
+	 { "GTKPlotter_set_scharge", _wrap_GTKPlotter_set_scharge, METH_VARARGS, NULL},
+	 { "GTKPlotter_set_trajdens", _wrap_GTKPlotter_set_trajdens, METH_VARARGS, NULL},
+	 { "GTKPlotter_set_bfield", _wrap_GTKPlotter_set_bfield, METH_VARARGS, NULL},
+	 { "GTKPlotter_set_particledatabase", _wrap_GTKPlotter_set_particledatabase, METH_VARARGS, NULL},
+	 { "GTKPlotter_opengl", _wrap_GTKPlotter_opengl, METH_VARARGS, NULL},
+	 { "GTKPlotter_force_software_renderer", _wrap_GTKPlotter_force_software_renderer, METH_VARARGS, NULL},
+	 { "GTKPlotter_new_geometry_3d_plot_window", _wrap_GTKPlotter_new_geometry_3d_plot_window, METH_VARARGS, NULL},
+	 { "GTKPlotter_new_geometry_plot_window", _wrap_GTKPlotter_new_geometry_plot_window, METH_VARARGS, NULL},
+	 { "GTKPlotter_new_particle_plot_window", _wrap_GTKPlotter_new_particle_plot_window, METH_VARARGS, NULL},
+	 { "GTKPlotter_new_field_plot_window", _wrap_GTKPlotter_new_field_plot_window, METH_VARARGS, NULL},
+	 { "GTKPlotter_delete_window", _wrap_GTKPlotter_delete_window, METH_VARARGS, NULL},
+	 { "GTKPlotter_swigregister", GTKPlotter_swigregister, METH_VARARGS, NULL},
 	 { "__bddd_0", _wrap___bddd_0, METH_VARARGS, NULL},
 	 { "__bddd_1", _wrap___bddd_1, METH_VARARGS, NULL},
 	 { "__bddd_2", _wrap___bddd_2, METH_VARARGS, NULL},
@@ -37982,6 +38875,8 @@ static swig_type_info _swigt__p_Field = {"_p_Field", "Field *", 0, 0, (void*)0, 
 static swig_type_info _swigt__p_FieldGraph = {"_p_FieldGraph", "FieldGraph *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Frame = {"_p_Frame", "Frame *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_FuncSolid = {"_p_FuncSolid", "FuncSolid *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_GTKPlotter = {"_p_GTKPlotter", "GTKPlotter *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_GTKWindow = {"_p_GTKWindow", "GTKWindow *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GeomPlot = {"_p_GeomPlot", "GeomPlot *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GeomPlotter = {"_p_GeomPlotter", "GeomPlotter *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Geometry = {"_p_Geometry", "Geometry *", 0, 0, (void*)0, 0};
@@ -38028,10 +38923,13 @@ static swig_type_info _swigt__p_double = {"_p_double", "double *", 0, 0, (void*)
 static swig_type_info _swigt__p_f_double_double_double__bool = {"_p_f_double_double_double__bool", "bdddptr|bool (*)(double,double,double)", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_f_void__void = {"_p_f_void__void", "void (*)(void)", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_field_extrpl_e = {"_p_field_extrpl_e", "enum field_extrpl_e *|field_extrpl_e *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_field_loc_type_e = {"_p_field_loc_type_e", "field_loc_type_e *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_field_type_e = {"_p_field_type_e", "enum field_type_e *|field_diag_type_e *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int = {"_p_int", "intptr_t *|int *|int_least32_t *|int_fast32_t *|int32_t *|int_fast16_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_long_long = {"_p_long_long", "int_least64_t *|int_fast64_t *|int64_t *|long long *|intmax_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_op_bool_double_double_double = {"_p_op_bool_double_double_double", "op_bool_double_double_double *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_p_p_char = {"_p_p_p_char", "char ***", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_particle_diag_plot_type_e = {"_p_particle_diag_plot_type_e", "particle_diag_plot_type_e *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_short = {"_p_short", "short *|int_least16_t *|int16_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_siginfo_t = {"_p_siginfo_t", "siginfo_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_signed_char = {"_p_signed_char", "signed char *|int_least8_t *|int_fast8_t *|int8_t *", 0, 0, (void*)0, 0};
@@ -38077,6 +38975,8 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_FieldGraph,
   &_swigt__p_Frame,
   &_swigt__p_FuncSolid,
+  &_swigt__p_GTKPlotter,
+  &_swigt__p_GTKWindow,
   &_swigt__p_GeomPlot,
   &_swigt__p_GeomPlotter,
   &_swigt__p_Geometry,
@@ -38123,10 +39023,13 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_f_double_double_double__bool,
   &_swigt__p_f_void__void,
   &_swigt__p_field_extrpl_e,
+  &_swigt__p_field_loc_type_e,
   &_swigt__p_field_type_e,
   &_swigt__p_int,
   &_swigt__p_long_long,
   &_swigt__p_op_bool_double_double_double,
+  &_swigt__p_p_p_char,
+  &_swigt__p_particle_diag_plot_type_e,
   &_swigt__p_short,
   &_swigt__p_siginfo_t,
   &_swigt__p_signed_char,
@@ -38172,6 +39075,8 @@ static swig_cast_info _swigc__p_Field[] = {  {&_swigt__p_VectorField, _p_VectorF
 static swig_cast_info _swigc__p_FieldGraph[] = {  {&_swigt__p_FieldGraph, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Frame[] = {  {&_swigt__p_Frame, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_FuncSolid[] = {  {&_swigt__p_FuncSolid, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_GTKPlotter[] = {  {&_swigt__p_GTKPlotter, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_GTKWindow[] = {  {&_swigt__p_GTKWindow, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GeomPlot[] = {  {&_swigt__p_GeomPlotter, _p_GeomPlotterTo_p_GeomPlot, 0, 0},  {&_swigt__p_GeomPlot, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GeomPlotter[] = {  {&_swigt__p_GeomPlotter, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Geometry[] = {  {&_swigt__p_Geometry, 0, 0, 0},{0, 0, 0, 0}};
@@ -38218,10 +39123,13 @@ static swig_cast_info _swigc__p_double[] = {  {&_swigt__p_double, 0, 0, 0},{0, 0
 static swig_cast_info _swigc__p_f_double_double_double__bool[] = {  {&_swigt__p_f_double_double_double__bool, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_f_void__void[] = {  {&_swigt__p_f_void__void, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_field_extrpl_e[] = {  {&_swigt__p_field_extrpl_e, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_field_loc_type_e[] = {  {&_swigt__p_field_loc_type_e, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_field_type_e[] = {  {&_swigt__p_field_type_e, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_long_long[] = {  {&_swigt__p_long_long, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_op_bool_double_double_double[] = {  {&_swigt__p_op_bool_double_double_double, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_p_p_char[] = {  {&_swigt__p_p_p_char, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_particle_diag_plot_type_e[] = {  {&_swigt__p_particle_diag_plot_type_e, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_short[] = {  {&_swigt__p_short, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_siginfo_t[] = {  {&_swigt__p_siginfo_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_signed_char[] = {  {&_swigt__p_signed_char, 0, 0, 0},{0, 0, 0, 0}};
@@ -38267,6 +39175,8 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_FieldGraph,
   _swigc__p_Frame,
   _swigc__p_FuncSolid,
+  _swigc__p_GTKPlotter,
+  _swigc__p_GTKWindow,
   _swigc__p_GeomPlot,
   _swigc__p_GeomPlotter,
   _swigc__p_Geometry,
@@ -38313,10 +39223,13 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_f_double_double_double__bool,
   _swigc__p_f_void__void,
   _swigc__p_field_extrpl_e,
+  _swigc__p_field_loc_type_e,
   _swigc__p_field_type_e,
   _swigc__p_int,
   _swigc__p_long_long,
   _swigc__p_op_bool_double_double_double,
+  _swigc__p_p_p_char,
+  _swigc__p_particle_diag_plot_type_e,
   _swigc__p_short,
   _swigc__p_siginfo_t,
   _swigc__p_signed_char,
@@ -39161,6 +40074,7 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "MESHSCALARFIELD_HPP",SWIG_From_int(static_cast< int >(1)));
   SWIG_Python_SetConstant(d, "EPOT_FIELD_HPP",SWIG_From_int(static_cast< int >(1)));
   SWIG_Python_SetConstant(d, "EPOT_EFIELD_HPP",SWIG_From_int(static_cast< int >(1)));
+  SWIG_Python_SetConstant(d, "GTKPLOTTER_HPP",SWIG_From_int(static_cast< int >(1)));
   SWIG_addvarlink(SWIG_globals(),(char *)"MAX_BDDDPTR",Swig_var_MAX_BDDDPTR_get, Swig_var_MAX_BDDDPTR_set);
   SWIG_addvarlink(SWIG_globals(),(char *)"fptr_bddd",Swig_var_fptr_bddd_get, Swig_var_fptr_bddd_set);
   SWIG_addvarlink(SWIG_globals(),(char *)"functor_bddd",Swig_var_functor_bddd_get, Swig_var_functor_bddd_set);
