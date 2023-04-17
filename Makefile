@@ -10,7 +10,7 @@ pybsimu_wrap.o: pybsimu_wrap.cxx
 	$(CC) -c -fpic -I/usr/include/python3.8 -I/home/ubuntu/include/ibsimu-1.0.6dev $(CXXFLAGS) pybsimu_wrap.cxx $(LDFLAGS)
 
 pybsimu_wrap.cxx pybsimu.py: pybsimu.i
-	$(SWIG) -c++ -python -o pybsimu_wrap.cxx -D_GNU_SOURCE -DHAVE_SIGINFO_T -I/home/ubuntu/include/ibsimu-1.0.6dev pybsimu.i
+	$(SWIG) -c++ -python -threads -o pybsimu_wrap.cxx -D_GNU_SOURCE -DHAVE_SIGINFO_T -DCAIRO_HAS_PNG_FUNCTIONS -I/home/ubuntu/include/ibsimu-1.0.6dev pybsimu.i
 
 clean:
 	$(RM) *.o pybsimu_wrap.cxx pybsimu.py _pybsimu.so

@@ -95,6 +95,13 @@ except __builtin__.Exception:
         pass
     _newclass = 0
 
+try:
+    import weakref
+    weakref_proxy = weakref.proxy
+except __builtin__.Exception:
+    weakref_proxy = lambda x: x
+
+
 VEC3D_HPP = _pybsimu.VEC3D_HPP
 class Vec3D(_object):
     __swig_setmethods__ = {}
@@ -1300,41 +1307,6 @@ class VectorField(Field):
 VectorField_swigregister = _pybsimu.VectorField_swigregister
 VectorField_swigregister(VectorField)
 
-EPOT_EFIELD_HPP = _pybsimu.EPOT_EFIELD_HPP
-class EpotEfield(VectorField):
-    __swig_setmethods__ = {}
-    for _s in [VectorField]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, EpotEfield, name, value)
-    __swig_getmethods__ = {}
-    for _s in [VectorField]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, EpotEfield, name)
-    __repr__ = _swig_repr
-
-    def __init__(self, *args):
-        this = _pybsimu.new_EpotEfield(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _pybsimu.delete_EpotEfield
-    __del__ = lambda self: None
-
-    def set_extrapolation(self, extrpl):
-        return _pybsimu.EpotEfield_set_extrapolation(self, extrpl)
-
-    def recalculate(self):
-        return _pybsimu.EpotEfield_recalculate(self)
-
-    def __call__(self, x):
-        return _pybsimu.EpotEfield___call__(self, x)
-
-    def debug_print(self, os):
-        return _pybsimu.EpotEfield_debug_print(self, os)
-EpotEfield_swigregister = _pybsimu.EpotEfield_swigregister
-EpotEfield_swigregister(EpotEfield)
-
 MESHVECTORFIELD_HPP = _pybsimu.MESHVECTORFIELD_HPP
 class MeshVectorField(VectorField, Mesh):
     __swig_setmethods__ = {}
@@ -1592,9 +1564,6 @@ class ParticleDataBase(_object):
     def get_save_trajectories(self):
         return _pybsimu.ParticleDataBase_get_save_trajectories(self)
 
-    def set_mirror(self, mirror):
-        return _pybsimu.ParticleDataBase_set_mirror(self, mirror)
-
     def get_mirror(self, mirror):
         return _pybsimu.ParticleDataBase_get_mirror(self, mirror)
 
@@ -1663,6 +1632,9 @@ class ParticleDataBase(_object):
 
     def debug_print(self, os):
         return _pybsimu.ParticleDataBase_debug_print(self, os)
+
+    def set_mirror(self, *args):
+        return _pybsimu.ParticleDataBase_set_mirror(self, *args)
 ParticleDataBase_swigregister = _pybsimu.ParticleDataBase_swigregister
 ParticleDataBase_swigregister(ParticleDataBase)
 
@@ -1877,6 +1849,9 @@ class Plotter(_object):
 
     def get_ranges(self, xmin, ymin, xmax, ymax):
         return _pybsimu.Plotter_get_ranges(self, xmin, ymin, xmax, ymax)
+
+    def plot_png(self, filename):
+        return _pybsimu.Plotter_plot_png(self, filename)
 Plotter_swigregister = _pybsimu.Plotter_swigregister
 Plotter_swigregister(Plotter)
 
@@ -2210,6 +2185,105 @@ class EpotField(MeshScalarField):
         return _pybsimu.EpotField___call__(self, *args)
 EpotField_swigregister = _pybsimu.EpotField_swigregister
 EpotField_swigregister(EpotField)
+
+EPOT_EFIELD_HPP = _pybsimu.EPOT_EFIELD_HPP
+class EpotEfield(VectorField):
+    __swig_setmethods__ = {}
+    for _s in [VectorField]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, EpotEfield, name, value)
+    __swig_getmethods__ = {}
+    for _s in [VectorField]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, EpotEfield, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _pybsimu.new_EpotEfield(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _pybsimu.delete_EpotEfield
+    __del__ = lambda self: None
+
+    def recalculate(self):
+        return _pybsimu.EpotEfield_recalculate(self)
+
+    def __call__(self, x):
+        return _pybsimu.EpotEfield___call__(self, x)
+
+    def debug_print(self, os):
+        return _pybsimu.EpotEfield_debug_print(self, os)
+
+    def set_extrapolation(self, *args):
+        return _pybsimu.EpotEfield_set_extrapolation(self, *args)
+EpotEfield_swigregister = _pybsimu.EpotEfield_swigregister
+EpotEfield_swigregister(EpotEfield)
+
+
+def __bddd_0(x, y, z):
+    return _pybsimu.__bddd_0(x, y, z)
+__bddd_0 = _pybsimu.__bddd_0
+
+def __bddd_1(x, y, z):
+    return _pybsimu.__bddd_1(x, y, z)
+__bddd_1 = _pybsimu.__bddd_1
+
+def init_bddd():
+    return _pybsimu.init_bddd()
+init_bddd = _pybsimu.init_bddd
+
+def bddd(k):
+    return _pybsimu.bddd(k)
+bddd = _pybsimu.bddd
+class op_bool_double_double_double(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, op_bool_double_double_double, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, op_bool_double_double_double, name)
+    __repr__ = _swig_repr
+
+    def zzz(self, id):
+        return _pybsimu.op_bool_double_double_double_zzz(self, id)
+
+    def handle(self, x, y, z):
+        return _pybsimu.op_bool_double_double_double_handle(self, x, y, z)
+    __swig_destroy__ = _pybsimu.delete_op_bool_double_double_double
+    __del__ = lambda self: None
+
+    def __init__(self):
+        if self.__class__ == op_bool_double_double_double:
+            _self = None
+        else:
+            _self = self
+        this = _pybsimu.new_op_bool_double_double_double(_self, )
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    def __disown__(self):
+        self.this.disown()
+        _pybsimu.disown_op_bool_double_double_double(self)
+        return weakref_proxy(self)
+op_bool_double_double_double_swigregister = _pybsimu.op_bool_double_double_double_swigregister
+op_bool_double_double_double_swigregister(op_bool_double_double_double)
+
+
+
+from functools import partial
+
+class RAPPER(op_bool_double_double_double):
+
+    def __init__(self, callback, id):
+        op_bool_double_double_double.__init__(self)
+        self._callback = callback
+        self.zzz(0)
+
+    def handle(self, x, y, z):
+#print('in handle')
+        return self._callback(x, y, z)
+
 
 # This file is compatible with both classic and new-style classes.
 
