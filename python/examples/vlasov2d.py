@@ -41,24 +41,26 @@ def simulate():
 
     print('making zz')
     zz = RAPPER(solid1, 7)
-    
+    zz8 = RAPPER(solid2, 8)
+    zz9 = RAPPER(solid3, 9)
+
     print(f'zz: {zz}')
     print(f'repr(zz): {repr(zz)}')
 
-    s1 = FuncSolid( bddd(0) )
+    s1 = FuncSolid( bddd(7) )
     geom.set_solid( 7, s1 )
-    #s2 = FuncSolid( RAPPER(solid2).calculate )
-    #geom.set_solid( 8, s2 )
-    #s3 = FuncSolid( RAPPER(solid3).calculate )
-    #geom.set_solid( 9, s3 )
+    s2 = FuncSolid( bddd(8) )
+    geom.set_solid( 8, s2 )
+    s3 = FuncSolid( bddd(9) )
+    geom.set_solid( 9, s3 )
     
     geom.set_boundary( 1, Bound(BOUND_DIRICHLET,  -3.0e3) )
     geom.set_boundary( 2, Bound(BOUND_DIRICHLET,  -1.0e3) )
     geom.set_boundary( 3, Bound(BOUND_NEUMANN,     0.0  ) )
     geom.set_boundary( 4, Bound(BOUND_NEUMANN,     0.0  ) )
     geom.set_boundary( 7, Bound(BOUND_DIRICHLET,  -3.0e3) )
-    #geom.set_boundary( 8, Bound(BOUND_DIRICHLET, -14.0e3) )
-    #geom.set_boundary( 9, Bound(BOUND_DIRICHLET,  -1.0e3) )
+    geom.set_boundary( 8, Bound(BOUND_DIRICHLET, -14.0e3) )
+    geom.set_boundary( 9, Bound(BOUND_DIRICHLET,  -1.0e3) )
     geom.build_mesh()
 
     epot = EpotField(geom)
