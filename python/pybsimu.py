@@ -2262,6 +2262,366 @@ def __bddd_9(x, y, z):
     return _pybsimu.__bddd_9(x, y, z)
 __bddd_9 = _pybsimu.__bddd_9
 
+def __bddd_10(x, y, z):
+    return _pybsimu.__bddd_10(x, y, z)
+__bddd_10 = _pybsimu.__bddd_10
+
+def __bddd_11(x, y, z):
+    return _pybsimu.__bddd_11(x, y, z)
+__bddd_11 = _pybsimu.__bddd_11
+
+def __bddd_12(x, y, z):
+    return _pybsimu.__bddd_12(x, y, z)
+__bddd_12 = _pybsimu.__bddd_12
+
+def __bddd_13(x, y, z):
+    return _pybsimu.__bddd_13(x, y, z)
+__bddd_13 = _pybsimu.__bddd_13
+
+def __bddd_14(x, y, z):
+    return _pybsimu.__bddd_14(x, y, z)
+__bddd_14 = _pybsimu.__bddd_14
+
+def __bddd_15(x, y, z):
+    return _pybsimu.__bddd_15(x, y, z)
+__bddd_15 = _pybsimu.__bddd_15
+
+def __bddd_16(x, y, z):
+    return _pybsimu.__bddd_16(x, y, z)
+__bddd_16 = _pybsimu.__bddd_16
+
+def __bddd_17(x, y, z):
+    return _pybsimu.__bddd_17(x, y, z)
+__bddd_17 = _pybsimu.__bddd_17
+
+def __bddd_18(x, y, z):
+    return _pybsimu.__bddd_18(x, y, z)
+__bddd_18 = _pybsimu.__bddd_18
+
+def __bddd_19(x, y, z):
+    return _pybsimu.__bddd_19(x, y, z)
+__bddd_19 = _pybsimu.__bddd_19
+
+def __bddd_20(x, y, z):
+    return _pybsimu.__bddd_20(x, y, z)
+__bddd_20 = _pybsimu.__bddd_20
+
+def __bddd_21(x, y, z):
+    return _pybsimu.__bddd_21(x, y, z)
+__bddd_21 = _pybsimu.__bddd_21
+
+def __bddd_22(x, y, z):
+    return _pybsimu.__bddd_22(x, y, z)
+__bddd_22 = _pybsimu.__bddd_22
+
+def __bddd_23(x, y, z):
+    return _pybsimu.__bddd_23(x, y, z)
+__bddd_23 = _pybsimu.__bddd_23
+
+def __bddd_24(x, y, z):
+    return _pybsimu.__bddd_24(x, y, z)
+__bddd_24 = _pybsimu.__bddd_24
+
+def __bddd_25(x, y, z):
+    return _pybsimu.__bddd_25(x, y, z)
+__bddd_25 = _pybsimu.__bddd_25
+
+def __bddd_26(x, y, z):
+    return _pybsimu.__bddd_26(x, y, z)
+__bddd_26 = _pybsimu.__bddd_26
+
+def __bddd_27(x, y, z):
+    return _pybsimu.__bddd_27(x, y, z)
+__bddd_27 = _pybsimu.__bddd_27
+
+def __bddd_28(x, y, z):
+    return _pybsimu.__bddd_28(x, y, z)
+__bddd_28 = _pybsimu.__bddd_28
+
+def __bddd_29(x, y, z):
+    return _pybsimu.__bddd_29(x, y, z)
+__bddd_29 = _pybsimu.__bddd_29
+
+def __bddd_30(x, y, z):
+    return _pybsimu.__bddd_30(x, y, z)
+__bddd_30 = _pybsimu.__bddd_30
+
+def __bddd_31(x, y, z):
+    return _pybsimu.__bddd_31(x, y, z)
+__bddd_31 = _pybsimu.__bddd_31
+
+def __bddd_32(x, y, z):
+    return _pybsimu.__bddd_32(x, y, z)
+__bddd_32 = _pybsimu.__bddd_32
+
+def __bddd_33(x, y, z):
+    return _pybsimu.__bddd_33(x, y, z)
+__bddd_33 = _pybsimu.__bddd_33
+
+def __bddd_34(x, y, z):
+    return _pybsimu.__bddd_34(x, y, z)
+__bddd_34 = _pybsimu.__bddd_34
+
+def __bddd_35(x, y, z):
+    return _pybsimu.__bddd_35(x, y, z)
+__bddd_35 = _pybsimu.__bddd_35
+
+def __bddd_36(x, y, z):
+    return _pybsimu.__bddd_36(x, y, z)
+__bddd_36 = _pybsimu.__bddd_36
+
+def __bddd_37(x, y, z):
+    return _pybsimu.__bddd_37(x, y, z)
+__bddd_37 = _pybsimu.__bddd_37
+
+def __bddd_38(x, y, z):
+    return _pybsimu.__bddd_38(x, y, z)
+__bddd_38 = _pybsimu.__bddd_38
+
+def __bddd_39(x, y, z):
+    return _pybsimu.__bddd_39(x, y, z)
+__bddd_39 = _pybsimu.__bddd_39
+
+def __bddd_40(x, y, z):
+    return _pybsimu.__bddd_40(x, y, z)
+__bddd_40 = _pybsimu.__bddd_40
+
+def __bddd_41(x, y, z):
+    return _pybsimu.__bddd_41(x, y, z)
+__bddd_41 = _pybsimu.__bddd_41
+
+def __bddd_42(x, y, z):
+    return _pybsimu.__bddd_42(x, y, z)
+__bddd_42 = _pybsimu.__bddd_42
+
+def __bddd_43(x, y, z):
+    return _pybsimu.__bddd_43(x, y, z)
+__bddd_43 = _pybsimu.__bddd_43
+
+def __bddd_44(x, y, z):
+    return _pybsimu.__bddd_44(x, y, z)
+__bddd_44 = _pybsimu.__bddd_44
+
+def __bddd_45(x, y, z):
+    return _pybsimu.__bddd_45(x, y, z)
+__bddd_45 = _pybsimu.__bddd_45
+
+def __bddd_46(x, y, z):
+    return _pybsimu.__bddd_46(x, y, z)
+__bddd_46 = _pybsimu.__bddd_46
+
+def __bddd_47(x, y, z):
+    return _pybsimu.__bddd_47(x, y, z)
+__bddd_47 = _pybsimu.__bddd_47
+
+def __bddd_48(x, y, z):
+    return _pybsimu.__bddd_48(x, y, z)
+__bddd_48 = _pybsimu.__bddd_48
+
+def __bddd_49(x, y, z):
+    return _pybsimu.__bddd_49(x, y, z)
+__bddd_49 = _pybsimu.__bddd_49
+
+def __bddd_50(x, y, z):
+    return _pybsimu.__bddd_50(x, y, z)
+__bddd_50 = _pybsimu.__bddd_50
+
+def __bddd_51(x, y, z):
+    return _pybsimu.__bddd_51(x, y, z)
+__bddd_51 = _pybsimu.__bddd_51
+
+def __bddd_52(x, y, z):
+    return _pybsimu.__bddd_52(x, y, z)
+__bddd_52 = _pybsimu.__bddd_52
+
+def __bddd_53(x, y, z):
+    return _pybsimu.__bddd_53(x, y, z)
+__bddd_53 = _pybsimu.__bddd_53
+
+def __bddd_54(x, y, z):
+    return _pybsimu.__bddd_54(x, y, z)
+__bddd_54 = _pybsimu.__bddd_54
+
+def __bddd_55(x, y, z):
+    return _pybsimu.__bddd_55(x, y, z)
+__bddd_55 = _pybsimu.__bddd_55
+
+def __bddd_56(x, y, z):
+    return _pybsimu.__bddd_56(x, y, z)
+__bddd_56 = _pybsimu.__bddd_56
+
+def __bddd_57(x, y, z):
+    return _pybsimu.__bddd_57(x, y, z)
+__bddd_57 = _pybsimu.__bddd_57
+
+def __bddd_58(x, y, z):
+    return _pybsimu.__bddd_58(x, y, z)
+__bddd_58 = _pybsimu.__bddd_58
+
+def __bddd_59(x, y, z):
+    return _pybsimu.__bddd_59(x, y, z)
+__bddd_59 = _pybsimu.__bddd_59
+
+def __bddd_60(x, y, z):
+    return _pybsimu.__bddd_60(x, y, z)
+__bddd_60 = _pybsimu.__bddd_60
+
+def __bddd_61(x, y, z):
+    return _pybsimu.__bddd_61(x, y, z)
+__bddd_61 = _pybsimu.__bddd_61
+
+def __bddd_62(x, y, z):
+    return _pybsimu.__bddd_62(x, y, z)
+__bddd_62 = _pybsimu.__bddd_62
+
+def __bddd_63(x, y, z):
+    return _pybsimu.__bddd_63(x, y, z)
+__bddd_63 = _pybsimu.__bddd_63
+
+def __bddd_64(x, y, z):
+    return _pybsimu.__bddd_64(x, y, z)
+__bddd_64 = _pybsimu.__bddd_64
+
+def __bddd_65(x, y, z):
+    return _pybsimu.__bddd_65(x, y, z)
+__bddd_65 = _pybsimu.__bddd_65
+
+def __bddd_66(x, y, z):
+    return _pybsimu.__bddd_66(x, y, z)
+__bddd_66 = _pybsimu.__bddd_66
+
+def __bddd_67(x, y, z):
+    return _pybsimu.__bddd_67(x, y, z)
+__bddd_67 = _pybsimu.__bddd_67
+
+def __bddd_68(x, y, z):
+    return _pybsimu.__bddd_68(x, y, z)
+__bddd_68 = _pybsimu.__bddd_68
+
+def __bddd_69(x, y, z):
+    return _pybsimu.__bddd_69(x, y, z)
+__bddd_69 = _pybsimu.__bddd_69
+
+def __bddd_70(x, y, z):
+    return _pybsimu.__bddd_70(x, y, z)
+__bddd_70 = _pybsimu.__bddd_70
+
+def __bddd_71(x, y, z):
+    return _pybsimu.__bddd_71(x, y, z)
+__bddd_71 = _pybsimu.__bddd_71
+
+def __bddd_72(x, y, z):
+    return _pybsimu.__bddd_72(x, y, z)
+__bddd_72 = _pybsimu.__bddd_72
+
+def __bddd_73(x, y, z):
+    return _pybsimu.__bddd_73(x, y, z)
+__bddd_73 = _pybsimu.__bddd_73
+
+def __bddd_74(x, y, z):
+    return _pybsimu.__bddd_74(x, y, z)
+__bddd_74 = _pybsimu.__bddd_74
+
+def __bddd_75(x, y, z):
+    return _pybsimu.__bddd_75(x, y, z)
+__bddd_75 = _pybsimu.__bddd_75
+
+def __bddd_76(x, y, z):
+    return _pybsimu.__bddd_76(x, y, z)
+__bddd_76 = _pybsimu.__bddd_76
+
+def __bddd_77(x, y, z):
+    return _pybsimu.__bddd_77(x, y, z)
+__bddd_77 = _pybsimu.__bddd_77
+
+def __bddd_78(x, y, z):
+    return _pybsimu.__bddd_78(x, y, z)
+__bddd_78 = _pybsimu.__bddd_78
+
+def __bddd_79(x, y, z):
+    return _pybsimu.__bddd_79(x, y, z)
+__bddd_79 = _pybsimu.__bddd_79
+
+def __bddd_80(x, y, z):
+    return _pybsimu.__bddd_80(x, y, z)
+__bddd_80 = _pybsimu.__bddd_80
+
+def __bddd_81(x, y, z):
+    return _pybsimu.__bddd_81(x, y, z)
+__bddd_81 = _pybsimu.__bddd_81
+
+def __bddd_82(x, y, z):
+    return _pybsimu.__bddd_82(x, y, z)
+__bddd_82 = _pybsimu.__bddd_82
+
+def __bddd_83(x, y, z):
+    return _pybsimu.__bddd_83(x, y, z)
+__bddd_83 = _pybsimu.__bddd_83
+
+def __bddd_84(x, y, z):
+    return _pybsimu.__bddd_84(x, y, z)
+__bddd_84 = _pybsimu.__bddd_84
+
+def __bddd_85(x, y, z):
+    return _pybsimu.__bddd_85(x, y, z)
+__bddd_85 = _pybsimu.__bddd_85
+
+def __bddd_86(x, y, z):
+    return _pybsimu.__bddd_86(x, y, z)
+__bddd_86 = _pybsimu.__bddd_86
+
+def __bddd_87(x, y, z):
+    return _pybsimu.__bddd_87(x, y, z)
+__bddd_87 = _pybsimu.__bddd_87
+
+def __bddd_88(x, y, z):
+    return _pybsimu.__bddd_88(x, y, z)
+__bddd_88 = _pybsimu.__bddd_88
+
+def __bddd_89(x, y, z):
+    return _pybsimu.__bddd_89(x, y, z)
+__bddd_89 = _pybsimu.__bddd_89
+
+def __bddd_90(x, y, z):
+    return _pybsimu.__bddd_90(x, y, z)
+__bddd_90 = _pybsimu.__bddd_90
+
+def __bddd_91(x, y, z):
+    return _pybsimu.__bddd_91(x, y, z)
+__bddd_91 = _pybsimu.__bddd_91
+
+def __bddd_92(x, y, z):
+    return _pybsimu.__bddd_92(x, y, z)
+__bddd_92 = _pybsimu.__bddd_92
+
+def __bddd_93(x, y, z):
+    return _pybsimu.__bddd_93(x, y, z)
+__bddd_93 = _pybsimu.__bddd_93
+
+def __bddd_94(x, y, z):
+    return _pybsimu.__bddd_94(x, y, z)
+__bddd_94 = _pybsimu.__bddd_94
+
+def __bddd_95(x, y, z):
+    return _pybsimu.__bddd_95(x, y, z)
+__bddd_95 = _pybsimu.__bddd_95
+
+def __bddd_96(x, y, z):
+    return _pybsimu.__bddd_96(x, y, z)
+__bddd_96 = _pybsimu.__bddd_96
+
+def __bddd_97(x, y, z):
+    return _pybsimu.__bddd_97(x, y, z)
+__bddd_97 = _pybsimu.__bddd_97
+
+def __bddd_98(x, y, z):
+    return _pybsimu.__bddd_98(x, y, z)
+__bddd_98 = _pybsimu.__bddd_98
+
+def __bddd_99(x, y, z):
+    return _pybsimu.__bddd_99(x, y, z)
+__bddd_99 = _pybsimu.__bddd_99
+
 def init_fptr_bddd_lookups():
     return _pybsimu.init_fptr_bddd_lookups()
 init_fptr_bddd_lookups = _pybsimu.init_fptr_bddd_lookups
@@ -2300,6 +2660,7 @@ class op_bool_double_double_double(_object):
         return weakref_proxy(self)
 op_bool_double_double_double_swigregister = _pybsimu.op_bool_double_double_double_swigregister
 op_bool_double_double_double_swigregister(op_bool_double_double_double)
+MAX_BDDDPTR = cvar.MAX_BDDDPTR
 
 
 
@@ -2321,6 +2682,8 @@ def funcsolid_callback(f):
     global next_fptr_index
     global callback_wrappers
     fptr_index = next_fptr_index
+    if fptr_index >= MAX_BDDDPTR:
+        raise IndexError(f'Exceeded MAX_BDDDPTR={MAX_BDDPTR}')
     next_fptr_index = next_fptr_index + 1
     callback_wrappers[fptr_index] = CallbackWrapper(f, fptr_index)
 # What we are returning is the C function pointer,
