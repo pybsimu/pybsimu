@@ -4298,11 +4298,6 @@ SWIGINTERN void EpotEfield_set_extrapolation__SWIG_1(EpotEfield *self,PyObject *
         self->set_extrapolation(extrap);
     }
 
-bool calc_op(double x, double y, double z, bool (*op)(double, double, double)) {
-  return op(x, y, z);
-}
-
-
 
 typedef bool(*bdddptr)(double, double, double);
 

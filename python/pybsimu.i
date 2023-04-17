@@ -141,12 +141,6 @@
     }
 }
 
-%{
-bool calc_op(double x, double y, double z, bool (*op)(double, double, double)) {
-  return op(x, y, z);
-}
-%}
-
 %feature("director") op_bool_double_double_double;
 
 %inline %{
@@ -265,74 +259,3 @@ class CallbackWrapper(op_bool_double_double_double):
         return self._callback(x, y, z)
 
 %}
-
-%typemap(in) field_extrpl_e[6] {
-  /* Check if is a list */
-  if (PyList_Check($input)) {
-    int size = PyList_Size($input);
-    int i = 0;
-    $1 = (char **) malloc((size+1)*sizeof(char *));
-    for (i = 0; i < size; i++) {
-      PyObject *o = PyList_GetItem($input, i);
-      if (PyString_Check(o)) {
-        $1[i] = PyString_AsString(PyList_GetItem($input, i));
-      } else {
-        free($1);
-        PyErr_SetString(PyExc_TypeError, "list must contain strings");
-        SWIG_fail;
-      }
-    }
-    $1[i] = 0;
-  } else {
-    PyErr_SetString(PyExc_TypeError, "not a list");
-    SWIG_fail;
-  }
-}
-
-// This cleans up the char ** array we malloc'd before the function call
-%typemap(freearg) char ** {
-  free((char *) $1);
-}
-
-/* 
-
-// a typemap for the callback, it expects the argument to be an integer
-// whose value is the address of an appropriate callback function
-%typemap(in) bool (*f)(double, double, double) {
-    $1 = (bool (*)(double, double, double))PyLong_AsVoidPtr($input);;
-}
-
-//%{
-//    void use_callback(bool (*f)(double x, double y, double z));
-//%}
-
-//%inline
-//%{
-//
-// a C function that accepts a callback
-//void use_callback(void (*f)(int i, const char* str))
-//{
-//    f(100, "callback arg");
-//}
-//
-//%}
-
-%pythoncode
-%{
-
-import ctypes
-
-# a ctypes callback prototype
-py_callback_type = ctypes.CFUNCTYPE(ctypes.c_bool, ctypes.c_double, ctypes.c_double, ctypes.c_double)
-
-def RAPPER(py_callback):
-
-    # wrap the python callback with a ctypes function pointer
-    f = py_callback_type(py_callback)
-
-    # get the function pointer of the ctypes wrapper by casting it to void* and taking its value
-    #f_ptr = ctypes.cast(f, ctypes.c_void_p)
-
-    return f
-
-%} */
