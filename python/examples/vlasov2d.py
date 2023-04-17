@@ -18,19 +18,18 @@ from pybsimu import \
     BOUND_NEUMANN, \
     MODE_2D, \
     MSG_VERBOSE, \
-    RAPPER, \
-    bddd
+    funcsolid_callback
 
 
+@funcsolid_callback
 def solid1(x, y, z):
-    print('in solid 1')
     return( x <= 0.02 and y >= 0.018 )
 
-
+@funcsolid_callback
 def solid2(x, y, z ):
     return( x >= 0.03 and x <= 0.04 and y >= 0.02 )
 
-
+@funcsolid_callback
 def solid3( x, y, z ):
     return( x >= 0.06 and y >= 0.03 and y >= 0.07 - 0.5*x )
 
@@ -39,19 +38,11 @@ def simulate():
 
     geom = Geometry ( MODE_2D, Int3D(241,101,1), Vec3D(0,0,0), 0.0005 )
 
-    print('making zz')
-    zz = RAPPER(solid1, 7)
-    zz8 = RAPPER(solid2, 8)
-    zz9 = RAPPER(solid3, 9)
-
-    print(f'zz: {zz}')
-    print(f'repr(zz): {repr(zz)}')
-
-    s1 = FuncSolid( bddd(7) )
+    s1 = FuncSolid( solid1 )
     geom.set_solid( 7, s1 )
-    s2 = FuncSolid( bddd(8) )
+    s2 = FuncSolid( solid2 )
     geom.set_solid( 8, s2 )
-    s3 = FuncSolid( bddd(9) )
+    s3 = FuncSolid( solid3 )
     geom.set_solid( 9, s3 )
     
     geom.set_boundary( 1, Bound(BOUND_DIRICHLET,  -3.0e3) )

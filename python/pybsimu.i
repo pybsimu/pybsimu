@@ -187,8 +187,7 @@ bool __bddd_9(double x, double y, double z) {
     return functor_bddd[9](x, y, z);
 }
 
-void init_bddd() {
-//    std::cout << "init_bddd" << std::endl;
+void init_fptr_bddd_lookups() {
     fptr_bddd.resize(1000);
     fptr_bddd[0] = &__bddd_0;
     fptr_bddd[1] = &__bddd_1;
@@ -202,54 +201,67 @@ void init_bddd() {
     fptr_bddd[9] = &__bddd_9;    
 }
 
-
-bdddptr bddd(int k) {
-//    std::cout << "fptr_bddd[" << k << "]: " << fptr_bddd[k] << std::endl;
+bdddptr get_fptr_bddd(int k) {
     return fptr_bddd[k];
 }
 
 struct op_bool_double_double_double {
-    void zzz(int id) {
-        init_bddd();
+    void initialize_fptr_lookup(int id) {
+        // It's not ideal but doesn't hurt to do this init every time.
+        init_fptr_bddd_lookups();
         functor_bddd.resize(1000);
+        // This sets up the functor to call our handle(x,y,z), which
+        // will be overridden in python class CallbackWrapper, which
+        // will then delegate it off to a python function.
         functor_bddd[id] = std::bind(&op_bool_double_double_double::handle, this, 
             std::placeholders::_1, 
             std::placeholders::_2, 
             std::placeholders::_3
         );
-    }    
-    virtual bool handle(double x, double y, double z) = 0;
-    virtual ~op_bool_double_double_double() {}
-};
-
-
-/*
-struct op_bool_double_double_double {
-    virtual bool handle(double x, double y, double z) = 0;
-    bdddptr get_op() {
-        using namespace std::placeholders;
-        auto cb = std::bind(&op_bool_double_double_double::handle, this, _1, _2, _3 );
-        return static_cast<bdddptr>(cb);
     }
+    // This will get overridden in python class CallbackWrapper.
+    virtual bool handle(double x, double y, double z) = 0;
+    // Virtual destructor just because.
     virtual ~op_bool_double_double_double() {}
 };
-*/
+
 %}
 
 %pythoncode
 %{
 
-from functools import partial
+# module global state
+next_fptr_index = 0
+callback_wrappers = {}
 
-class RAPPER(op_bool_double_double_double):
+# decorator for FuncSolid callbacks
+#
+# Used like:
+# @funcsolid_callback
+# def my_solid(x, y,z):
+#     return(x<=0.01 and y>=0.01 and z<=0.01)
+#
+# ... then, later ...
+# s1 = FuncSolid(my_solid)
+def funcsolid_callback(f):
+    # We will create and store the callback wrapper.
+    global next_fptr_index
+    global callback_wrappers
+    fptr_index = next_fptr_index
+    next_fptr_index = next_fptr_index + 1
+    callback_wrappers[fptr_index] = CallbackWrapper(f, fptr_index)
+    # What we are returning is the C function pointer,
+    # this is what gets passed to ibsimu FuncSolid constructor.
+    return get_fptr_bddd(fptr_index)
+
+class CallbackWrapper(op_bool_double_double_double):
 
     def __init__(self, callback, id):
         op_bool_double_double_double.__init__(self)
         self._callback = callback
-        self.zzz(id)
+        self.initialize_fptr_lookup(id)
                  
     def handle(self, x, y, z):
-        #print('in handle')
         return self._callback(x, y, z)
 
 %}

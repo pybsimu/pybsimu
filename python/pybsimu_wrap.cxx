@@ -4340,8 +4340,7 @@ bool __bddd_9(double x, double y, double z) {
     return functor_bddd[9](x, y, z);
 }
 
-void init_bddd() {
-//    std::cout << "init_bddd" << std::endl;
+void init_fptr_bddd_lookups() {
     fptr_bddd.resize(1000);
     fptr_bddd[0] = &__bddd_0;
     fptr_bddd[1] = &__bddd_1;
@@ -4355,38 +4354,30 @@ void init_bddd() {
     fptr_bddd[9] = &__bddd_9;    
 }
 
-
-bdddptr bddd(int k) {
-//    std::cout << "fptr_bddd[" << k << "]: " << fptr_bddd[k] << std::endl;
+bdddptr get_fptr_bddd(int k) {
     return fptr_bddd[k];
 }
 
 struct op_bool_double_double_double {
-    void zzz(int id) {
-        init_bddd();
+    void initialize_fptr_lookup(int id) {
+        // It's not ideal but doesn't hurt to do this init every time.
+        init_fptr_bddd_lookups();
         functor_bddd.resize(1000);
+        // This sets up the functor to call our handle(x,y,z), which
+        // will be overridden in python class CallbackWrapper, which
+        // will then delegate it off to a python function.
         functor_bddd[id] = std::bind(&op_bool_double_double_double::handle, this, 
             std::placeholders::_1, 
             std::placeholders::_2, 
             std::placeholders::_3
         );
-    }    
-    virtual bool handle(double x, double y, double z) = 0;
-    virtual ~op_bool_double_double_double() {}
-};
-
-
-/*
-struct op_bool_double_double_double {
-    virtual bool handle(double x, double y, double z) = 0;
-    bdddptr get_op() {
-        using namespace std::placeholders;
-        auto cb = std::bind(&op_bool_double_double_double::handle, this, _1, _2, _3 );
-        return static_cast<bdddptr>(cb);
     }
+    // This will get overridden in python class CallbackWrapper.
+    virtual bool handle(double x, double y, double z) = 0;
+    // Virtual destructor just because.
     virtual ~op_bool_double_double_double() {}
 };
-*/
+
 
 
 
@@ -32875,13 +32866,13 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_init_bddd(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_init_fptr_bddd_lookups(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   
-  if (!PyArg_ParseTuple(args,(char *)":init_bddd")) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)":init_fptr_bddd_lookups")) SWIG_fail;
   {
     SWIG_PYTHON_THREAD_BEGIN_ALLOW;
-    init_bddd();
+    init_fptr_bddd_lookups();
     SWIG_PYTHON_THREAD_END_ALLOW;
   }
   resultobj = SWIG_Py_Void();
@@ -32891,7 +32882,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_bddd(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_get_fptr_bddd(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   int arg1 ;
   int val1 ;
@@ -32899,15 +32890,15 @@ SWIGINTERN PyObject *_wrap_bddd(PyObject *SWIGUNUSEDPARM(self), PyObject *args) 
   PyObject * obj0 = 0 ;
   bdddptr result;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:bddd",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:get_fptr_bddd",&obj0)) SWIG_fail;
   ecode1 = SWIG_AsVal_int(obj0, &val1);
   if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "bddd" "', argument " "1"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "get_fptr_bddd" "', argument " "1"" of type '" "int""'");
   } 
   arg1 = static_cast< int >(val1);
   {
     SWIG_PYTHON_THREAD_BEGIN_ALLOW;
-    result = (bdddptr)bddd(arg1);
+    result = (bdddptr)get_fptr_bddd(arg1);
     SWIG_PYTHON_THREAD_END_ALLOW;
   }
   resultobj = SWIG_NewFunctionPtrObj((void *)(result), SWIGTYPE_p_f_double_double_double__bool);
@@ -32917,7 +32908,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_op_bool_double_double_double_zzz(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_op_bool_double_double_double_initialize_fptr_lookup(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   op_bool_double_double_double *arg1 = (op_bool_double_double_double *) 0 ;
   int arg2 ;
@@ -32928,20 +32919,20 @@ SWIGINTERN PyObject *_wrap_op_bool_double_double_double_zzz(PyObject *SWIGUNUSED
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:op_bool_double_double_double_zzz",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:op_bool_double_double_double_initialize_fptr_lookup",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_op_bool_double_double_double, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "op_bool_double_double_double_zzz" "', argument " "1"" of type '" "op_bool_double_double_double *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "op_bool_double_double_double_initialize_fptr_lookup" "', argument " "1"" of type '" "op_bool_double_double_double *""'"); 
   }
   arg1 = reinterpret_cast< op_bool_double_double_double * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "op_bool_double_double_double_zzz" "', argument " "2"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "op_bool_double_double_double_initialize_fptr_lookup" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = static_cast< int >(val2);
   {
     SWIG_PYTHON_THREAD_BEGIN_ALLOW;
-    (arg1)->zzz(arg2);
+    (arg1)->initialize_fptr_lookup(arg2);
     SWIG_PYTHON_THREAD_END_ALLOW;
   }
   resultobj = SWIG_Py_Void();
@@ -33581,9 +33572,9 @@ static PyMethodDef SwigMethods[] = {
 	 { "__bddd_7", _wrap___bddd_7, METH_VARARGS, NULL},
 	 { "__bddd_8", _wrap___bddd_8, METH_VARARGS, NULL},
 	 { "__bddd_9", _wrap___bddd_9, METH_VARARGS, NULL},
-	 { "init_bddd", _wrap_init_bddd, METH_VARARGS, NULL},
-	 { "bddd", _wrap_bddd, METH_VARARGS, NULL},
-	 { "op_bool_double_double_double_zzz", _wrap_op_bool_double_double_double_zzz, METH_VARARGS, NULL},
+	 { "init_fptr_bddd_lookups", _wrap_init_fptr_bddd_lookups, METH_VARARGS, NULL},
+	 { "get_fptr_bddd", _wrap_get_fptr_bddd, METH_VARARGS, NULL},
+	 { "op_bool_double_double_double_initialize_fptr_lookup", _wrap_op_bool_double_double_double_initialize_fptr_lookup, METH_VARARGS, NULL},
 	 { "op_bool_double_double_double_handle", _wrap_op_bool_double_double_double_handle, METH_VARARGS, NULL},
 	 { "delete_op_bool_double_double_double", _wrap_delete_op_bool_double_double_double, METH_VARARGS, NULL},
 	 { "new_op_bool_double_double_double", _wrap_new_op_bool_double_double_double, METH_VARARGS, NULL},

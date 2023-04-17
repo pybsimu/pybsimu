@@ -2262,13 +2262,13 @@ def __bddd_9(x, y, z):
     return _pybsimu.__bddd_9(x, y, z)
 __bddd_9 = _pybsimu.__bddd_9
 
-def init_bddd():
-    return _pybsimu.init_bddd()
-init_bddd = _pybsimu.init_bddd
+def init_fptr_bddd_lookups():
+    return _pybsimu.init_fptr_bddd_lookups()
+init_fptr_bddd_lookups = _pybsimu.init_fptr_bddd_lookups
 
-def bddd(k):
-    return _pybsimu.bddd(k)
-bddd = _pybsimu.bddd
+def get_fptr_bddd(k):
+    return _pybsimu.get_fptr_bddd(k)
+get_fptr_bddd = _pybsimu.get_fptr_bddd
 class op_bool_double_double_double(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, op_bool_double_double_double, name, value)
@@ -2276,8 +2276,8 @@ class op_bool_double_double_double(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, op_bool_double_double_double, name)
     __repr__ = _swig_repr
 
-    def zzz(self, id):
-        return _pybsimu.op_bool_double_double_double_zzz(self, id)
+    def initialize_fptr_lookup(self, id):
+        return _pybsimu.op_bool_double_double_double_initialize_fptr_lookup(self, id)
 
     def handle(self, x, y, z):
         return _pybsimu.op_bool_double_double_double_handle(self, x, y, z)
@@ -2303,17 +2303,38 @@ op_bool_double_double_double_swigregister(op_bool_double_double_double)
 
 
 
-from functools import partial
+# module global state
+next_fptr_index = 0
+callback_wrappers = {}
 
-class RAPPER(op_bool_double_double_double):
+# decorator for FuncSolid callbacks
+#
+# Used like:
+# @funcsolid_callback
+# def my_solid(x, y,z):
+#     return(x<=0.01 and y>=0.01 and z<=0.01)
+#
+# ... then, later ...
+# s1 = FuncSolid(my_solid)
+def funcsolid_callback(f):
+# We will create and store the callback wrapper.
+    global next_fptr_index
+    global callback_wrappers
+    fptr_index = next_fptr_index
+    next_fptr_index = next_fptr_index + 1
+    callback_wrappers[fptr_index] = CallbackWrapper(f, fptr_index)
+# What we are returning is the C function pointer,
+# this is what gets passed to ibsimu FuncSolid constructor.
+    return get_fptr_bddd(fptr_index)
+
+class CallbackWrapper(op_bool_double_double_double):
 
     def __init__(self, callback, id):
         op_bool_double_double_double.__init__(self)
         self._callback = callback
-        self.zzz(id)
+        self.initialize_fptr_lookup(id)
 
     def handle(self, x, y, z):
-#print('in handle')
         return self._callback(x, y, z)
 
 
