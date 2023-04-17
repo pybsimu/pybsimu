@@ -10,7 +10,6 @@ from pybsimu import \
     Vec3D, \
     EpotBiCGSTABSolver, \
     ParticleDataBaseCyl, \
-    GeomPlotter, \
     GTKPlotter, \
     InitialPlasma, \
     ibsimu, \
