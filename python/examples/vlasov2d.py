@@ -102,7 +102,6 @@ def vlasov2d():
     ibsimu.set_message_threshold(MSG_VERBOSE, 1)
     ibsimu.set_thread_count(4)
     simulate()
-    
 
 if __name__ == '__main__':
     vlasov2d()
