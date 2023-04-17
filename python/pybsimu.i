@@ -157,14 +157,34 @@ std::vector<bdddptr> fptr_bddd;
 std::vector<std::function<bool(double,double,double)>> functor_bddd;
 
 bool __bddd_0(double x, double y, double z) {
-//    std::cout << "in __bddd_0" << std::endl;
-//    std::cout << "functor_bdd.size(): " << functor_bddd.size() << std::endl;
-    bool result = functor_bddd[0](x, y, z);
-    return result;
+    return functor_bddd[0](x, y, z);
 }
-
 bool __bddd_1(double x, double y, double z) {
     return functor_bddd[1](x, y, z);
+}
+bool __bddd_2(double x, double y, double z) {
+    return functor_bddd[2](x, y, z);
+}
+bool __bddd_3(double x, double y, double z) {
+    return functor_bddd[3](x, y, z);
+}
+bool __bddd_4(double x, double y, double z) {
+    return functor_bddd[4](x, y, z);
+}
+bool __bddd_5(double x, double y, double z) {
+    return functor_bddd[5](x, y, z);
+}
+bool __bddd_6(double x, double y, double z) {
+    return functor_bddd[6](x, y, z);
+}
+bool __bddd_7(double x, double y, double z) {
+    return functor_bddd[7](x, y, z);
+}
+bool __bddd_8(double x, double y, double z) {
+    return functor_bddd[8](x, y, z);
+}
+bool __bddd_9(double x, double y, double z) {
+    return functor_bddd[9](x, y, z);
 }
 
 void init_bddd() {
@@ -172,6 +192,14 @@ void init_bddd() {
     fptr_bddd.resize(1000);
     fptr_bddd[0] = &__bddd_0;
     fptr_bddd[1] = &__bddd_1;
+    fptr_bddd[2] = &__bddd_2;
+    fptr_bddd[3] = &__bddd_3;
+    fptr_bddd[4] = &__bddd_4;
+    fptr_bddd[5] = &__bddd_5;
+    fptr_bddd[6] = &__bddd_6;
+    fptr_bddd[7] = &__bddd_7;
+    fptr_bddd[8] = &__bddd_8;
+    fptr_bddd[9] = &__bddd_9;    
 }
 
 
@@ -218,7 +246,7 @@ class RAPPER(op_bool_double_double_double):
     def __init__(self, callback, id):
         op_bool_double_double_double.__init__(self)
         self._callback = callback
-        self.zzz(0)
+        self.zzz(id)
                  
     def handle(self, x, y, z):
         #print('in handle')

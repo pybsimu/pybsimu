@@ -2230,6 +2230,38 @@ def __bddd_1(x, y, z):
     return _pybsimu.__bddd_1(x, y, z)
 __bddd_1 = _pybsimu.__bddd_1
 
+def __bddd_2(x, y, z):
+    return _pybsimu.__bddd_2(x, y, z)
+__bddd_2 = _pybsimu.__bddd_2
+
+def __bddd_3(x, y, z):
+    return _pybsimu.__bddd_3(x, y, z)
+__bddd_3 = _pybsimu.__bddd_3
+
+def __bddd_4(x, y, z):
+    return _pybsimu.__bddd_4(x, y, z)
+__bddd_4 = _pybsimu.__bddd_4
+
+def __bddd_5(x, y, z):
+    return _pybsimu.__bddd_5(x, y, z)
+__bddd_5 = _pybsimu.__bddd_5
+
+def __bddd_6(x, y, z):
+    return _pybsimu.__bddd_6(x, y, z)
+__bddd_6 = _pybsimu.__bddd_6
+
+def __bddd_7(x, y, z):
+    return _pybsimu.__bddd_7(x, y, z)
+__bddd_7 = _pybsimu.__bddd_7
+
+def __bddd_8(x, y, z):
+    return _pybsimu.__bddd_8(x, y, z)
+__bddd_8 = _pybsimu.__bddd_8
+
+def __bddd_9(x, y, z):
+    return _pybsimu.__bddd_9(x, y, z)
+__bddd_9 = _pybsimu.__bddd_9
+
 def init_bddd():
     return _pybsimu.init_bddd()
 init_bddd = _pybsimu.init_bddd
@@ -2278,7 +2310,7 @@ class RAPPER(op_bool_double_double_double):
     def __init__(self, callback, id):
         op_bool_double_double_double.__init__(self)
         self._callback = callback
-        self.zzz(0)
+        self.zzz(id)
 
     def handle(self, x, y, z):
 #print('in handle')
