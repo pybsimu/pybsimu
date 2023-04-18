@@ -146,18 +146,14 @@ def simulate():
     scharge = MeshScalarField(geom)
     scharge_ave = MeshScalarField(geom)
 
-    print('making bool array 1')
     fout = [True, True, True]
     bfield = MeshVectorField(MODE_3D, fout, 1.0e-3, 1.0, bfieldfn)
-    print('making bool array 2')
     bfldextrpl = [
         FIELD_ZERO, FIELD_ZERO, 
         FIELD_ZERO, FIELD_ZERO, 
         FIELD_ZERO, FIELD_ZERO 
     ]
-    print('making bool array 3')
     bfield.set_extrapolation( bfldextrpl )
-    print('making bool array 4')
 
     efield = EpotEfield (epot)
     efldextrpl = [
