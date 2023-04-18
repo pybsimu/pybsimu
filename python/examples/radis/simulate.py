@@ -1,7 +1,6 @@
 from pybsimu import \
     Geometry, \
     Bound, \
-    FuncSolid, \
     EpotField, \
     EpotEfield, \
     MeshScalarField, \
@@ -10,8 +9,6 @@ from pybsimu import \
     Vec3D, \
     EpotBiCGSTABSolver, \
     ParticleDataBase3D, \
-    GeomPlotter, \
-    GTKPlotter, \
     InitialPlasma, \
     Transformation, \
     CallbackFunctorB_V, \
@@ -21,13 +18,11 @@ from pybsimu import \
     ibsimu, \
     AXIS_Z, \
     FIELD_EXTRAPOLATE, \
-    FIELD_SYMMETRIC_POTENTIAL, \
     FIELD_ZERO, \
     BOUND_DIRICHLET, \
     BOUND_NEUMANN, \
     MODE_3D, \
-    MSG_VERBOSE, \
-    funcsolid_callback
+    MSG_VERBOSE
 
 import math
 
@@ -47,8 +42,8 @@ class ForcedPot(CallbackFunctorB_V):
 
 def simulate():
     start = -3.0e-3
-    #h = 0.4e-3
-    h = 2e-3
+    h = 0.4e-3
+    #h = 2e-3
     sizereq = [
         50.0e-3,
         50.0e-3, 

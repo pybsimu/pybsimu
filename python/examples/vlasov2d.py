@@ -1,3 +1,8 @@
+"""This is the pybsimu version of the example at this link:
+
+https://ibsimu.sourceforge.net/vlasov2d/index.html
+
+"""
 from pybsimu import \
     Geometry, \
     Bound, \
@@ -73,7 +78,7 @@ def simulate():
         False, False, True, False, False, False
     ])
 
-    for i in range(5):
+    for _ in range(5):
         solver.solve(epot, scharge)
         efield.recalculate()
         pdb.clear()

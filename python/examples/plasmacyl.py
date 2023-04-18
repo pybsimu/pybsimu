@@ -1,3 +1,8 @@
+"""This is the pybsimu version of the example at this link:
+
+https://ibsimu.sourceforge.net/plasmacyl/index.html
+
+"""
 from pybsimu import \
     Geometry, \
     Bound, \
