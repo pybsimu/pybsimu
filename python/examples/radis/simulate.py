@@ -1,3 +1,8 @@
+"""This is the pybsimu version of the simulation portion of the example at this link:
+
+https://ibsimu.sourceforge.net/examples/radis/index.html
+
+"""
 from pybsimu import \
     Geometry, \
     Bound, \
