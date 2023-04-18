@@ -18,6 +18,11 @@
 %rename(times) operator*(int, const Int3D&);
 %rename(times) Int3D::operator*;
 
+%rename(at) Transformation::operator[];
+
+%rename(call) CallbackFunctorB_V::operator();
+
+
 // These are in the header but no implementation, not sure what's up with that
 %ignore Geometry::get_boundaries;
 %ignore STLFile::STLFile(const std::vector<Vec3D>&, const std::vector<VTriangle>&);
@@ -28,11 +33,17 @@
 %ignore trajectory_diagnostic_string_with_unit;
 %ignore trajectory_diagnostic_string_unit;
 
-// Replacing these with x, y, z, in extend blocks later.
-%ignore Vec3D::operator[];
-%ignore Int3D::operator[];
+// Also adding x, y, z, in extend blocks later.
+%rename(at) Vec3D::operator[];
+%rename(at) Int3D::operator[];
 
 %include "std_string.i"
+%include "std_vector.i"
+
+%template(VectorDouble) std::vector<double>;
+
+%feature("director") op_bool_double_double_double;
+%feature("director") CallbackFunctorB_V;
 
 %{
 #include "mesh.hpp"
@@ -61,6 +72,7 @@
 #include "meshscalarfield.hpp"
 #include "epot_field.hpp"
 #include "gtkplotter.hpp"
+#include "transformation.hpp"
 #include <functional>
 %}
 
@@ -90,6 +102,97 @@
     }
 };
 
+%include "typemaps.i"
+
+%typemap(in) (bool const [3]) (bool temp[3]) {
+    if( PyList_Check($input)) {
+        int i;
+        if( PyList_Size($input) != 3 ) {
+            PyErr_SetString(PyExc_TypeError, "invalid list size, should have 3 elements");
+            SWIG_fail;
+        }
+        for( i=0; i<3; ++i) {
+            PyObject *o = PyList_GetItem($input, i);
+            temp[i] = PyObject_IsTrue(o); 
+        }
+        $1 = &temp[0];
+    } else {
+        PyErr_SetString(PyExc_TypeError, "not a list");
+        SWIG_fail;
+    }
+}
+
+%typecheck(SWIG_TYPECHECK_BOOL_ARRAY) (bool const [3]) {
+    $1 = PyList_Check($input) ? 1 : 0;
+}
+
+%typemap(in) (bool const [6]) (bool temp[6]) {
+    if( PyList_Check($input)) {
+        int i;
+        if( PyList_Size($input) != 6 ) {
+            PyErr_SetString(PyExc_TypeError, "invalid list size, should have 6 elements");
+            SWIG_fail;
+        }
+        for( i=0; i<6; ++i) {
+            PyObject *o = PyList_GetItem($input, i);
+            temp[i] = PyObject_IsTrue(o); 
+        }
+        $1 = &temp[0];
+    } else {
+        PyErr_SetString(PyExc_TypeError, "not a list");
+        SWIG_fail;
+    }
+}
+
+%typecheck(SWIG_TYPECHECK_BOOL_ARRAY) (bool const [6]) {
+    $1 = PyList_Check($input) ? 1 : 0;
+}
+
+%typemap(in) (field_extrpl_e const [6]) (field_extrpl_e temp[6]) {
+    if( PyList_Check($input)) {
+        int i;
+        if( PyList_Size($input) != 6 ) {
+            PyErr_SetString(PyExc_TypeError, "invalid list size, should have 6 elements");
+            SWIG_fail;
+        }
+        for( i=0; i<6; ++i) {
+            PyObject *o = PyList_GetItem($input, i);
+            temp[i] = static_cast<field_extrpl_e>(PyInt_AsLong(o));
+        }
+        $1 = &temp[0];
+    } else {
+        PyErr_SetString(PyExc_TypeError, "not a list");
+        SWIG_fail;
+    }
+}
+
+%typecheck(SWIG_TYPECHECK_INT64_ARRAY) (field_extrpl_e const [6]) {
+    $1 = PyList_Check($input) ? 1 : 0;
+}
+
+%typemap(in) (field_extrpl_e [6]) (field_extrpl_e temp[6]) {
+    if( PyList_Check($input)) {
+        int i;
+        if( PyList_Size($input) != 6 ) {
+            PyErr_SetString(PyExc_TypeError, "invalid list size, should have 6 elements");
+            SWIG_fail;
+        }
+        for( i=0; i<6; ++i) {
+            PyObject *o = PyList_GetItem($input, i);
+            temp[i] = static_cast<field_extrpl_e>(PyInt_AsLong(o));
+        }
+        $1 = &temp[0];
+    } else {
+        PyErr_SetString(PyExc_TypeError, "not a list");
+        SWIG_fail;
+    }
+}
+
+%typecheck(SWIG_TYPECHECK_INT64_ARRAY) (field_extrpl_e [6]) {
+    $1 = PyList_Check($input) ? 1 : 0;
+}
+
+
 %include "stdint.i"
 %include "mesh.hpp"
 %include "geometry.hpp"
@@ -115,8 +218,9 @@
 %include "meshscalarfield.hpp"
 %include "epot_field.hpp"
 %include "epot_efield.hpp"
+%include "transformation.hpp"
 
-%include "typemaps.i"
+
 %typemap(in) int * ($*1_type temp1) {
     temp1 = PyInt_AsLong($input);
     $1 = &temp1;
@@ -126,7 +230,7 @@
 }
 
 %include "gtkplotter.hpp"
-
+/*
 %extend EpotEfield {
     void set_extrapolation(PyObject* e1, PyObject* e2, PyObject* e3, PyObject* e4, PyObject* e5, PyObject* e6) {
         field_extrpl_e extrap[6];
@@ -139,7 +243,7 @@
         $self->set_extrapolation(extrap);
     }
 }
-
+*/
 %extend ParticleDataBase {
     void set_mirror(PyObject* b1, PyObject* b2, PyObject* b3, PyObject* b4, PyObject* b5, PyObject* b6) {
         bool b[6];
@@ -153,7 +257,6 @@
     }
 }
 
-%feature("director") op_bool_double_double_double;
 
 %inline %{
 

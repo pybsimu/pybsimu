@@ -62,16 +62,16 @@ def simulate():
     bfield = MeshVectorField() 
     efield = EpotEfield(epot)
 
-    efield.set_extrapolation(
+    efield.set_extrapolation([
         FIELD_EXTRAPOLATE, FIELD_EXTRAPOLATE, 
         FIELD_SYMMETRIC_POTENTIAL, FIELD_EXTRAPOLATE,
         FIELD_EXTRAPOLATE, FIELD_EXTRAPOLATE
-    )
+    ])
 
     pdb = ParticleDataBaseCyl(geom)
-    pdb.set_mirror( 
+    pdb.set_mirror([
         False, False, True, False, False, False        
-    )
+    ])
 
     for i in range(15):
 

@@ -102,6 +102,183 @@ except __builtin__.Exception:
     weakref_proxy = lambda x: x
 
 
+class SwigPyIterator(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, SwigPyIterator, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, SwigPyIterator, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    __swig_destroy__ = _pybsimu.delete_SwigPyIterator
+    __del__ = lambda self: None
+
+    def value(self):
+        return _pybsimu.SwigPyIterator_value(self)
+
+    def incr(self, n=1):
+        return _pybsimu.SwigPyIterator_incr(self, n)
+
+    def decr(self, n=1):
+        return _pybsimu.SwigPyIterator_decr(self, n)
+
+    def distance(self, x):
+        return _pybsimu.SwigPyIterator_distance(self, x)
+
+    def equal(self, x):
+        return _pybsimu.SwigPyIterator_equal(self, x)
+
+    def copy(self):
+        return _pybsimu.SwigPyIterator_copy(self)
+
+    def next(self):
+        return _pybsimu.SwigPyIterator_next(self)
+
+    def __next__(self):
+        return _pybsimu.SwigPyIterator___next__(self)
+
+    def previous(self):
+        return _pybsimu.SwigPyIterator_previous(self)
+
+    def advance(self, n):
+        return _pybsimu.SwigPyIterator_advance(self, n)
+
+    def __eq__(self, x):
+        return _pybsimu.SwigPyIterator___eq__(self, x)
+
+    def __ne__(self, x):
+        return _pybsimu.SwigPyIterator___ne__(self, x)
+
+    def __iadd__(self, n):
+        return _pybsimu.SwigPyIterator___iadd__(self, n)
+
+    def __isub__(self, n):
+        return _pybsimu.SwigPyIterator___isub__(self, n)
+
+    def __add__(self, n):
+        return _pybsimu.SwigPyIterator___add__(self, n)
+
+    def __sub__(self, *args):
+        return _pybsimu.SwigPyIterator___sub__(self, *args)
+    def __iter__(self):
+        return self
+SwigPyIterator_swigregister = _pybsimu.SwigPyIterator_swigregister
+SwigPyIterator_swigregister(SwigPyIterator)
+
+class VectorDouble(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, VectorDouble, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, VectorDouble, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _pybsimu.VectorDouble_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _pybsimu.VectorDouble___nonzero__(self)
+
+    def __bool__(self):
+        return _pybsimu.VectorDouble___bool__(self)
+
+    def __len__(self):
+        return _pybsimu.VectorDouble___len__(self)
+
+    def __getslice__(self, i, j):
+        return _pybsimu.VectorDouble___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _pybsimu.VectorDouble___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _pybsimu.VectorDouble___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _pybsimu.VectorDouble___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _pybsimu.VectorDouble___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _pybsimu.VectorDouble___setitem__(self, *args)
+
+    def pop(self):
+        return _pybsimu.VectorDouble_pop(self)
+
+    def append(self, x):
+        return _pybsimu.VectorDouble_append(self, x)
+
+    def empty(self):
+        return _pybsimu.VectorDouble_empty(self)
+
+    def size(self):
+        return _pybsimu.VectorDouble_size(self)
+
+    def swap(self, v):
+        return _pybsimu.VectorDouble_swap(self, v)
+
+    def begin(self):
+        return _pybsimu.VectorDouble_begin(self)
+
+    def end(self):
+        return _pybsimu.VectorDouble_end(self)
+
+    def rbegin(self):
+        return _pybsimu.VectorDouble_rbegin(self)
+
+    def rend(self):
+        return _pybsimu.VectorDouble_rend(self)
+
+    def clear(self):
+        return _pybsimu.VectorDouble_clear(self)
+
+    def get_allocator(self):
+        return _pybsimu.VectorDouble_get_allocator(self)
+
+    def pop_back(self):
+        return _pybsimu.VectorDouble_pop_back(self)
+
+    def erase(self, *args):
+        return _pybsimu.VectorDouble_erase(self, *args)
+
+    def __init__(self, *args):
+        this = _pybsimu.new_VectorDouble(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def push_back(self, x):
+        return _pybsimu.VectorDouble_push_back(self, x)
+
+    def front(self):
+        return _pybsimu.VectorDouble_front(self)
+
+    def back(self):
+        return _pybsimu.VectorDouble_back(self)
+
+    def assign(self, n, x):
+        return _pybsimu.VectorDouble_assign(self, n, x)
+
+    def resize(self, *args):
+        return _pybsimu.VectorDouble_resize(self, *args)
+
+    def insert(self, *args):
+        return _pybsimu.VectorDouble_insert(self, *args)
+
+    def reserve(self, n):
+        return _pybsimu.VectorDouble_reserve(self, n)
+
+    def capacity(self):
+        return _pybsimu.VectorDouble_capacity(self)
+    __swig_destroy__ = _pybsimu.delete_VectorDouble
+    __del__ = lambda self: None
+VectorDouble_swigregister = _pybsimu.VectorDouble_swigregister
+VectorDouble_swigregister(VectorDouble)
+
 VEC3D_HPP = _pybsimu.VEC3D_HPP
 class Vec3D(_object):
     __swig_setmethods__ = {}
@@ -118,6 +295,9 @@ class Vec3D(_object):
             self.this = this
     __swig_destroy__ = _pybsimu.delete_Vec3D
     __del__ = lambda self: None
+
+    def at(self, *args):
+        return _pybsimu.Vec3D_at(self, *args)
 
     def __call__(self, *args):
         return _pybsimu.Vec3D___call__(self, *args)
@@ -228,6 +408,9 @@ class Int3D(_object):
             self.this = this
     __swig_destroy__ = _pybsimu.delete_Int3D
     __del__ = lambda self: None
+
+    def at(self, *args):
+        return _pybsimu.Int3D_at(self, *args)
 
     def __call__(self, *args):
         return _pybsimu.Int3D___call__(self, *args)
@@ -368,10 +551,6 @@ class Bound(_object):
     __del__ = lambda self: None
 Bound_swigregister = _pybsimu.Bound_swigregister
 Bound_swigregister(Bound)
-
-def __str__(*args):
-    return _pybsimu.__str__(*args)
-__str__ = _pybsimu.__str__
 
 SMESH_NODE_ID_MASK = _pybsimu.SMESH_NODE_ID_MASK
 SMESH_NODE_ID_PURE_VACUUM = _pybsimu.SMESH_NODE_ID_PURE_VACUUM
@@ -1036,15 +1215,27 @@ class CallbackFunctorB_V(CallbackFunctor):
     for _s in [CallbackFunctor]:
         __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
     __getattr__ = lambda self, name: _swig_getattr(self, CallbackFunctorB_V, name)
-
-    def __init__(self, *args, **kwargs):
-        raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
     __swig_destroy__ = _pybsimu.delete_CallbackFunctorB_V
     __del__ = lambda self: None
 
-    def __call__(self, x):
-        return _pybsimu.CallbackFunctorB_V___call__(self, x)
+    def call(self, x):
+        return _pybsimu.CallbackFunctorB_V_call(self, x)
+
+    def __init__(self):
+        if self.__class__ == CallbackFunctorB_V:
+            _self = None
+        else:
+            _self = self
+        this = _pybsimu.new_CallbackFunctorB_V(_self, )
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    def __disown__(self):
+        self.this.disown()
+        _pybsimu.disown_CallbackFunctorB_V(self)
+        return weakref_proxy(self)
 CallbackFunctorB_V_swigregister = _pybsimu.CallbackFunctorB_V_swigregister
 CallbackFunctorB_V_swigregister(CallbackFunctorB_V)
 
@@ -1090,8 +1281,8 @@ class InitialPlasma(CallbackFunctorB_V):
     __swig_destroy__ = _pybsimu.delete_InitialPlasma
     __del__ = lambda self: None
 
-    def __call__(self, x):
-        return _pybsimu.InitialPlasma___call__(self, x)
+    def call(self, x):
+        return _pybsimu.InitialPlasma_call(self, x)
 InitialPlasma_swigregister = _pybsimu.InitialPlasma_swigregister
 InitialPlasma_swigregister(InitialPlasma)
 
@@ -2207,6 +2398,9 @@ class EpotEfield(VectorField):
     __swig_destroy__ = _pybsimu.delete_EpotEfield
     __del__ = lambda self: None
 
+    def set_extrapolation(self, extrpl):
+        return _pybsimu.EpotEfield_set_extrapolation(self, extrpl)
+
     def recalculate(self):
         return _pybsimu.EpotEfield_recalculate(self)
 
@@ -2215,11 +2409,160 @@ class EpotEfield(VectorField):
 
     def debug_print(self, os):
         return _pybsimu.EpotEfield_debug_print(self, os)
-
-    def set_extrapolation(self, *args):
-        return _pybsimu.EpotEfield_set_extrapolation(self, *args)
 EpotEfield_swigregister = _pybsimu.EpotEfield_swigregister
 EpotEfield_swigregister(EpotEfield)
+
+TRANSFORMATION_HPP = _pybsimu.TRANSFORMATION_HPP
+class Transformation(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Transformation, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Transformation, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _pybsimu.new_Transformation(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _pybsimu.delete_Transformation
+    __del__ = lambda self: None
+
+    def at(self, *args):
+        return _pybsimu.Transformation_at(self, *args)
+
+    def transpose(self):
+        return _pybsimu.Transformation_transpose(self)
+
+    def determinant(self):
+        return _pybsimu.Transformation_determinant(self)
+
+    def inverse(self):
+        return _pybsimu.Transformation_inverse(self)
+
+    def __ne__(self, m):
+        return _pybsimu.Transformation___ne__(self, m)
+
+    def __imul__(self, s):
+        return _pybsimu.Transformation___imul__(self, s)
+
+    def __mul__(self, *args):
+        return _pybsimu.Transformation___mul__(self, *args)
+
+    def __mod__(self, v):
+        return _pybsimu.Transformation___mod__(self, v)
+
+    def transform(self, xin):
+        return _pybsimu.Transformation_transform(self, xin)
+
+    def transform_homogenous_point(self, xin):
+        return _pybsimu.Transformation_transform_homogenous_point(self, xin)
+
+    def transform_point(self, xin):
+        return _pybsimu.Transformation_transform_point(self, xin)
+
+    def inv_transform_point(self, xin):
+        return _pybsimu.Transformation_inv_transform_point(self, xin)
+
+    def transform_vector(self, xin):
+        return _pybsimu.Transformation_transform_vector(self, xin)
+
+    def inv_transform_vector(self, xin):
+        return _pybsimu.Transformation_inv_transform_vector(self, xin)
+
+    def reset(self):
+        return _pybsimu.Transformation_reset(self)
+
+    def translate(self, d):
+        return _pybsimu.Transformation_translate(self, d)
+
+    def translate_before(self, d):
+        return _pybsimu.Transformation_translate_before(self, d)
+
+    def scale(self, s):
+        return _pybsimu.Transformation_scale(self, s)
+
+    def scale_before(self, s):
+        return _pybsimu.Transformation_scale_before(self, s)
+
+    def rotate_x(self, a):
+        return _pybsimu.Transformation_rotate_x(self, a)
+
+    def rotate_x_before(self, a):
+        return _pybsimu.Transformation_rotate_x_before(self, a)
+
+    def rotate_y(self, a):
+        return _pybsimu.Transformation_rotate_y(self, a)
+
+    def rotate_y_before(self, a):
+        return _pybsimu.Transformation_rotate_y_before(self, a)
+
+    def rotate_z(self, a):
+        return _pybsimu.Transformation_rotate_z(self, a)
+
+    def rotate_z_before(self, a):
+        return _pybsimu.Transformation_rotate_z_before(self, a)
+    if _newclass:
+        unity = staticmethod(_pybsimu.Transformation_unity)
+    else:
+        unity = _pybsimu.Transformation_unity
+    if _newclass:
+        translation = staticmethod(_pybsimu.Transformation_translation)
+    else:
+        translation = _pybsimu.Transformation_translation
+    if _newclass:
+        scaling = staticmethod(_pybsimu.Transformation_scaling)
+    else:
+        scaling = _pybsimu.Transformation_scaling
+    if _newclass:
+        rotation_x = staticmethod(_pybsimu.Transformation_rotation_x)
+    else:
+        rotation_x = _pybsimu.Transformation_rotation_x
+    if _newclass:
+        rotation_y = staticmethod(_pybsimu.Transformation_rotation_y)
+    else:
+        rotation_y = _pybsimu.Transformation_rotation_y
+    if _newclass:
+        rotation_z = staticmethod(_pybsimu.Transformation_rotation_z)
+    else:
+        rotation_z = _pybsimu.Transformation_rotation_z
+
+    def save(self, *args):
+        return _pybsimu.Transformation_save(self, *args)
+
+    def debug_print(self, os):
+        return _pybsimu.Transformation_debug_print(self, os)
+Transformation_swigregister = _pybsimu.Transformation_swigregister
+Transformation_swigregister(Transformation)
+
+def Transformation_unity():
+    return _pybsimu.Transformation_unity()
+Transformation_unity = _pybsimu.Transformation_unity
+
+def Transformation_translation(d):
+    return _pybsimu.Transformation_translation(d)
+Transformation_translation = _pybsimu.Transformation_translation
+
+def Transformation_scaling(s):
+    return _pybsimu.Transformation_scaling(s)
+Transformation_scaling = _pybsimu.Transformation_scaling
+
+def Transformation_rotation_x(a):
+    return _pybsimu.Transformation_rotation_x(a)
+Transformation_rotation_x = _pybsimu.Transformation_rotation_x
+
+def Transformation_rotation_y(a):
+    return _pybsimu.Transformation_rotation_y(a)
+Transformation_rotation_y = _pybsimu.Transformation_rotation_y
+
+def Transformation_rotation_z(a):
+    return _pybsimu.Transformation_rotation_z(a)
+Transformation_rotation_z = _pybsimu.Transformation_rotation_z
+
+def __str__(*args):
+    return _pybsimu.__str__(*args)
+__str__ = _pybsimu.__str__
 
 GTKPLOTTER_HPP = _pybsimu.GTKPLOTTER_HPP
 class GTKPlotter(_object):
