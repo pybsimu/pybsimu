@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-#FROM quay.io/pypa/manylinux2014_x86_64
+
 ENV DEBIAN_FRONTEND=noninteractive
 SHELL ["/bin/bash", "-c"]
 ARG username=ubuntu
@@ -19,23 +19,16 @@ RUN apt-get update &&\
     python3-pip \
     python3.8-venv
 
-#RUN yum -y install \
-#    cairo-devel \
-#    gsl-devel \
-#    gtk3-devel
-
-
 RUN python3 -m pip install -U wheel setuptools
 
 RUN adduser $username && \
     chpasswd <<<"$username:$password" &&   usermod -aG sudo ubuntu &&   su - ubuntu && \
     cd ~/
 
-#RUN mkdcd /home/ubuntu
-
 COPY libibsimu-1.0.6dev_e8500a2.tar.gz .
 COPY stlfile.hpp.patch .
 
+# Build the ibsimu c++ library.
 RUN tar zxvf libibsimu-1.0.6dev_e8500a2.tar.gz &&\
     cd libibsimu-1.0.6dev_e8500a2 &&\
     patch src/stlfile.hpp < ../stlfile.hpp.patch &&\
@@ -46,6 +39,9 @@ RUN tar zxvf libibsimu-1.0.6dev_e8500a2.tar.gz &&\
 
 COPY --chown=$username . /home/$username/
 
-COPY . /home/ubuntu/
-COPY ibsimu_config.sh .
-COPY vscode/* /.vscode/
+COPY pybsimu /pybsimu
+
+# Build the ibsimu swig bindings and make the python module.
+ENV LD_LIBRARY_PATH=/home/ubuntu/lib
+ENV PKG_CONFIG_PATH=/home/ubuntu/lib/pkgconfig
+RUN cd /pybsimu && make
