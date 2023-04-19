@@ -11,9 +11,12 @@ include(${SWIG_USE_FILE})
 # =======
 
 
-find_package(PythonLibs REQUIRED)
-include_directories(${PYTHON_INCLUDE_DIRS})
+#find_package(PythonLibs REQUIRED)
+#include_directories(${PYTHON_INCLUDE_DIRS})
 #target_link_libraries(__TARGET__ ${PYTHON_LIBRARIES})
+
+find_package(Python3 COMPONENTS Development.Module)
+include_directories(${Python3_INCLUDE_DIRS})
 
 
 # The name of the shared library must match the module name
