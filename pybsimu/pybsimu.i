@@ -32,6 +32,7 @@
 %ignore trajectory_diagnostic_string;
 %ignore trajectory_diagnostic_string_with_unit;
 %ignore trajectory_diagnostic_string_unit;
+%ignore MeshColormap::has_data;
 
 // Also adding x, y, z, in extend blocks later.
 %rename(at) Vec3D::operator[];
@@ -73,6 +74,8 @@
 #include "epot_field.hpp"
 #include "gtkplotter.hpp"
 #include "transformation.hpp"
+#include "meshcolormap.hpp"
+#include "fieldgraph.hpp"
 #include <functional>
 %}
 
@@ -227,6 +230,8 @@
 %include "epot_field.hpp"
 %include "epot_efield.hpp"
 %include "transformation.hpp"
+%include "meshcolormap.hpp"
+%include "fieldgraph.hpp"
 
 
 %typemap(in) int * ($*1_type temp1) {
@@ -238,32 +243,6 @@
 }
 
 %include "gtkplotter.hpp"
-/*
-%extend EpotEfield {
-    void set_extrapolation(PyObject* e1, PyObject* e2, PyObject* e3, PyObject* e4, PyObject* e5, PyObject* e6) {
-        field_extrpl_e extrap[6];
-        extrap[0] = static_cast<field_extrpl_e>( (int) PyInt_AsLong(e1) );
-        extrap[1] = static_cast<field_extrpl_e>( (int) PyInt_AsLong(e2) );
-        extrap[2] = static_cast<field_extrpl_e>( (int) PyInt_AsLong(e3) );
-        extrap[3] = static_cast<field_extrpl_e>( (int) PyInt_AsLong(e4) );
-        extrap[4] = static_cast<field_extrpl_e>( (int) PyInt_AsLong(e5) );
-        extrap[5] = static_cast<field_extrpl_e>( (int) PyInt_AsLong(e6) );
-        $self->set_extrapolation(extrap);
-    }
-}
-*/
-%extend ParticleDataBase {
-    void set_mirror(PyObject* b1, PyObject* b2, PyObject* b3, PyObject* b4, PyObject* b5, PyObject* b6) {
-        bool b[6];
-        b[0] = PyObject_IsTrue(b1);
-        b[1] = PyObject_IsTrue(b2);
-        b[2] = PyObject_IsTrue(b3);
-        b[3] = PyObject_IsTrue(b4);
-        b[4] = PyObject_IsTrue(b5);
-        b[5] = PyObject_IsTrue(b6);
-        $self->set_mirror(b);
-    }
-}
 
 
 %inline %{
