@@ -102,6 +102,14 @@
     }
 };
 
+%extend Emittance {
+    std::string to_string() {
+        std::ostringstream ost;
+        $self->debug_print(ost);
+        return ost.str();
+    }
+}
+
 %include "typemaps.i"
 
 %typemap(in) (bool const [3]) (bool temp[3]) {
