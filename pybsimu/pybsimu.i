@@ -76,6 +76,8 @@
 #include "transformation.hpp"
 #include "meshcolormap.hpp"
 #include "fieldgraph.hpp"
+#include "trajectorydiagnostics.hpp"
+#include "graph3d.hpp"
 #include <functional>
 %}
 
@@ -203,6 +205,31 @@
     $1 = PyList_Check($input) ? 1 : 0;
 }
 
+// Couldn't get this to work: 
+//  %template(VectorTrajectoryDiagnosticE) std::vector<trajectory_diagnostic_e>;
+// so typemap below instead.
+
+
+%typemap(in) (std::vector< trajectory_diagnostic_e,std::allocator< trajectory_diagnostic_e > > const &) (std::vector<trajectory_diagnostic_e> temp) {
+    if( PyList_Check($input)) {
+        int i;
+        temp.resize(PyList_Size($input));
+        for( i=0; i<PyList_Size($input); ++i) {
+            PyObject *o = PyList_GetItem($input, i);
+            temp[i] = static_cast<trajectory_diagnostic_e>(PyInt_AsLong(o));
+        }
+        $1 = &temp;
+    } else {
+        PyErr_SetString(PyExc_TypeError, "not a list");
+        SWIG_fail;
+    }
+}
+
+%typecheck(SWIG_TYPECHECK_INT64_ARRAY) (std::vector< trajectory_diagnostic_e,std::allocator< trajectory_diagnostic_e > > const &) {
+    $1 = PyList_Check($input) ? 1 : 0;
+}
+
+
 
 %include "stdint.i"
 %include "mesh.hpp"
@@ -232,6 +259,8 @@
 %include "transformation.hpp"
 %include "meshcolormap.hpp"
 %include "fieldgraph.hpp"
+%include "trajectorydiagnostics.hpp"
+%include "graph3d.hpp"
 
 
 %typemap(in) int * ($*1_type temp1) {
