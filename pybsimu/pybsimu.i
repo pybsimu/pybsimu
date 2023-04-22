@@ -78,6 +78,7 @@
 #include "fieldgraph.hpp"
 #include "trajectorydiagnostics.hpp"
 #include "graph3d.hpp"
+#include "particlestatistics.hpp"
 #include <functional>
 %}
 
@@ -261,6 +262,7 @@
 %include "fieldgraph.hpp"
 %include "trajectorydiagnostics.hpp"
 %include "graph3d.hpp"
+%include "particlestatistics.hpp"
 
 
 %typemap(in) int * ($*1_type temp1) {
