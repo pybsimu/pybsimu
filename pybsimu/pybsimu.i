@@ -230,6 +230,17 @@
     $1 = PyList_Check($input) ? 1 : 0;
 }
 
+%exception { 
+    try {
+        $action
+    } catch (Error &e) {
+        SWIG_exception(SWIG_RuntimeError, e.get_error_message().c_str());
+    } catch (std::exception &e) {
+        SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (...) {
+        SWIG_exception(SWIG_RuntimeError, "unknown exception");
+    }
+}
 
 
 %include "stdint.i"
