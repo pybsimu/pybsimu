@@ -75,10 +75,13 @@
 #include "gtkplotter.hpp"
 #include "transformation.hpp"
 #include "meshcolormap.hpp"
+#include "graph.hpp"
+#include "graph3d.hpp"
 #include "fieldgraph.hpp"
 #include "trajectorydiagnostics.hpp"
-#include "graph3d.hpp"
 #include "particlestatistics.hpp"
+#include "fielddiagplot.hpp"
+#include "fielddiagplotter.hpp"
 #include <functional>
 %}
 
@@ -206,6 +209,57 @@
     $1 = PyList_Check($input) ? 1 : 0;
 }
 
+
+
+
+%typemap(in) (field_diag_type_e const [2]) (field_diag_type_e temp[2]) {
+    if( PyList_Check($input)) {
+        int i;
+        if( PyList_Size($input) != 2 ) {
+            PyErr_SetString(PyExc_TypeError, "invalid list size, should have 2 elements");
+            SWIG_fail;
+        }
+        for( i=0; i<2; ++i) {
+            PyObject *o = PyList_GetItem($input, i);
+            temp[i] = static_cast<field_diag_type_e>(PyInt_AsLong(o));
+        }
+        $1 = &temp[0];
+    } else {
+        PyErr_SetString(PyExc_TypeError, "not a list");
+        SWIG_fail;
+    }
+}
+
+%typecheck(SWIG_TYPECHECK_INT64_ARRAY) (field_diag_type_e const [2]) {
+    $1 = PyList_Check($input) ? 1 : 0;
+}
+
+
+%typemap(in) (field_loc_type_e const [2]) (field_loc_type_e temp[2]) {
+    if( PyList_Check($input)) {
+        int i;
+        if( PyList_Size($input) != 2 ) {
+            PyErr_SetString(PyExc_TypeError, "invalid list size, should have 2 elements");
+            SWIG_fail;
+        }
+        for( i=0; i<2; ++i) {
+            PyObject *o = PyList_GetItem($input, i);
+            temp[i] = static_cast<field_loc_type_e>(PyInt_AsLong(o));
+        }
+        $1 = &temp[0];
+    } else {
+        PyErr_SetString(PyExc_TypeError, "not a list");
+        SWIG_fail;
+    }
+}
+
+%typecheck(SWIG_TYPECHECK_INT64_ARRAY) (field_loc_type_e const [2]) {
+    $1 = PyList_Check($input) ? 1 : 0;
+}
+
+
+
+
 // Couldn't get this to work: 
 //  %template(VectorTrajectoryDiagnosticE) std::vector<trajectory_diagnostic_e>;
 // so typemap below instead.
@@ -270,10 +324,13 @@
 %include "epot_efield.hpp"
 %include "transformation.hpp"
 %include "meshcolormap.hpp"
+%include "graph.hpp"
+%include "graph3d.hpp"
 %include "fieldgraph.hpp"
 %include "trajectorydiagnostics.hpp"
-%include "graph3d.hpp"
 %include "particlestatistics.hpp"
+%include "fielddiagplot.hpp"
+%include "fielddiagplotter.hpp"
 
 
 %typemap(in) int * ($*1_type temp1) {

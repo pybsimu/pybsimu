@@ -16,6 +16,7 @@ from pybsimu import \
     EpotBiCGSTABSolver, \
     ParticleDataBase2D, \
     GeomPlotter, \
+    FieldDiagPlotter, \
     ibsimu, \
     FIELD_EXTRAPOLATE, \
     FIELD_SYMMETRIC_POTENTIAL, \
@@ -23,6 +24,10 @@ from pybsimu import \
     BOUND_NEUMANN, \
     MODE_2D, \
     MSG_VERBOSE, \
+    FIELD_EPOT, \
+    FIELD_SCHARGE, \
+    FIELDD_LOC_Y, \
+    FIELDD_LOC_NONE, \
     funcsolid_callback
 
 
@@ -102,6 +107,18 @@ def simulate():
     geomplotter.set_epot(epot)
     geomplotter.set_particle_database(pdb)
     geomplotter.plot_png(str("plot1.png"))
+
+
+    fplotter = FieldDiagPlotter(geom)
+    fplotter.set_scharge(scharge)
+    fplotter.set_epot(epot)
+    fplotter.set_coordinates( 100, Vec3D(0.01,0,0), Vec3D(0.01,0.02,0) )
+    # options for entries in 'diag' are listed here:  https://ibsimu.sourceforge.net/manual_1_0_6/types_8hpp.html#a4503147d9d9fb7640ff4bebc2af18e01
+    diag = [FIELD_EPOT, FIELD_SCHARGE]
+    loc = [FIELDD_LOC_Y, FIELDD_LOC_NONE]
+    fplotter.set_diagnostic( diag, loc )
+    fplotter.plot_png( "plasma2d_field.png" )
+
 
 def vlasov2d():
     ibsimu.set_message_threshold(MSG_VERBOSE, 1)
