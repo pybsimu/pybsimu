@@ -83,6 +83,7 @@
 #include "fielddiagplot.hpp"
 #include "fielddiagplotter.hpp"
 #include <functional>
+#include <regex>
 %}
 
 %include "vec3d.hpp"
@@ -115,6 +116,45 @@
     std::string to_string() {
         std::ostringstream ost;
         $self->debug_print(ost);
+        return ost.str();
+    }
+}
+
+%extend TrajectoryDiagnosticData {
+    std::string to_csv_str() {
+        std::ostringstream ost;
+        
+        // header line
+        std::regex r("[^a-zA-Z0-9]");
+        bool first = true;
+        for(size_t k=0; k < $self->diag_size(); ++k) {
+            if( !first ) {
+                ost << ",";
+            }
+            auto diagnostic_type = $self->diagnostic(k);
+            auto diagnostic_type_str = trajectory_diagnostic_string[diagnostic_type];
+            auto diagnostic_unit_str = trajectory_diagnostic_string_unit[diagnostic_type];
+            std::string diagnostic_header = std::string(diagnostic_type_str) + std::string("_") + std::string(diagnostic_unit_str);
+            auto fixed_diagnostic_header = std::regex_replace(diagnostic_header, r, "_");
+            ost << fixed_diagnostic_header;
+            first = false;
+        }
+        ost << std::endl;
+
+        // data
+        for( size_t row = 0; row < $self->traj_size(); ++row ) {
+            bool first = true;
+            for( size_t col = 0; col < $self->diag_size(); ++col ) {
+                if( !first ) {
+                    ost << ",";
+                }
+                auto value = (* $self)(row, col);
+                ost << value;
+                first = false;
+            }
+            ost << std::endl;
+        }
+
         return ost.str();
     }
 }
@@ -295,7 +335,6 @@
         SWIG_exception(SWIG_RuntimeError, "unknown exception");
     }
 }
-
 
 %include "stdint.i"
 %include "mesh.hpp"
@@ -626,4 +665,13 @@ class CallbackWrapper(op_bool_double_double_double):
     def handle(self, x, y, z):
         return self._callback(x, y, z)
 
+
+import pandas
+import io
+
+def traj_diag_dataframe(traj_diag_obj):
+    traj_diag_csv_str = traj_diag_obj.to_csv_str()
+    traj_diag_data_stream = io.BytesIO(traj_diag_csv_str.encode())
+    traj_diag_df = pandas.read_csv(traj_diag_data_stream)
+    return traj_diag_df
 %}
