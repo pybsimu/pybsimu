@@ -46,6 +46,8 @@
 %feature("director") op_bool_double_double_double;
 %feature("director") CallbackFunctorB_V;
 
+%delobject STLSolid::add_stl_file;
+
 %{
 #include "mesh.hpp"
 #include "geometry.hpp"
