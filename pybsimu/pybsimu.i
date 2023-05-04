@@ -657,6 +657,14 @@ def funcsolid_callback(f):
     # this is what gets passed to ibsimu FuncSolid constructor.
     return get_fptr_bddd(fptr_index)
 
+
+# Use this in between e.g. different scenarios, to avoid
+# exceeding MAX_BDDDPTR.
+def reset_funcsolids():
+    global next_fptr_index
+    next_fptr_index = 0
+
+
 class CallbackWrapper(op_bool_double_double_double):
 
     def __init__(self, callback, id):
