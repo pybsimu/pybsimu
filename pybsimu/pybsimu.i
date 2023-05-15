@@ -162,6 +162,18 @@
     }
 }
 
+%inline %{
+    Geometry* geometry_from_file(const std::string& geometryFilePath) {
+        std::ifstream geometryInputStream( geometryFilePath.c_str() );
+        if( !geometryInputStream.good() ) {
+            throw( Error( ERROR_LOCATION, (std::string)"couldn\'t open file \'" + geometryFilePath.c_str() + "\'" ) );
+        }
+        Geometry* geometry = new Geometry( geometryInputStream );
+        geometryInputStream.close();
+        return geometry;
+    }
+%}
+
 %include "typemaps.i"
 
 %typemap(in) (bool const [3]) (bool temp[3]) {
