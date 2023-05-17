@@ -38,6 +38,9 @@
 %rename(at) Vec3D::operator[];
 %rename(at) Int3D::operator[];
 
+%rename(at) ParticleP3D::operator[];
+%rename(at) ParticleP2D::operator[];
+
 %include "std_string.i"
 %include "std_vector.i"
 
@@ -101,6 +104,11 @@
     double z() {
         return $self->operator[](2);
     }
+    std::string __str__() {
+       std::ostringstream ost;
+       ost << *$self;
+       return ost.str();
+   }    
 };
 
 %extend Int3D {
@@ -112,6 +120,29 @@
     }
     double z() {
         return $self->operator[](2);
+    }
+    std::string __str__() {
+       std::ostringstream ost;
+       ost << *$self;
+       return ost.str();
+   }    
+};
+
+%extend ParticleP2D {
+    double t() {
+        return $self->operator[](0);
+    }
+};
+
+%extend ParticlePCyl {
+    double t() {
+        return $self->operator[](0);
+    }
+};
+
+%extend ParticleP3D {
+    double t() {
+        return $self->operator[](0);
     }
 };
 
