@@ -205,6 +205,18 @@
     }
 %}
 
+%inline %{
+    EpotField* epot_field_from_file(const std::string& epotFieldFilePath, const Geometry& geom) {
+        std::ifstream epotFieldInputStream( epotFieldFilePath.c_str() );
+        if( !epotFieldInputStream.good() ) {
+            throw( Error( ERROR_LOCATION, (std::string)"couldn\'t open file \'" + epotFieldFilePath.c_str() + "\'" ) );
+        }
+        EpotField* epotField = new EpotField( epotFieldInputStream, geom );
+        epotFieldInputStream.close();
+        return epotField;
+    }
+%}
+
 %include "typemaps.i"
 
 %typemap(in) (bool const [3]) (bool temp[3]) {
