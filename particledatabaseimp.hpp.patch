@@ -1,0 +1,10 @@
+--- particledatabaseimp_orig.hpp	2023-05-18 00:06:56.065157008 +0000
++++ particledatabaseimp.hpp	2023-05-18 00:08:09.148641000 +0000
+@@ -683,6 +683,7 @@
+ 	// Make solvers
+ 	pthread_mutex_t                      scharge_mutex = PTHREAD_MUTEX_INITIALIZER;
+ 	std::vector<ParticleIterator<PP> *>  iterators;
++	ibsimu.message( 1 ) << "Thread count for particle solvers: " << ibsimu.get_thread_count() << "\n";
+ 	for( uint32_t a = 0; a < ibsimu.get_thread_count(); a++ ) {
+ 
+ 	    iterators.push_back( new ParticleIterator<PP>( PARTICLE_ITERATOR_ADAPTIVE, _epsabs, _epsrel, 

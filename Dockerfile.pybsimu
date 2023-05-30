@@ -26,12 +26,13 @@ RUN adduser $username && \
     cd ~/
 
 COPY libibsimu-1.0.6dev_e8500a2.tar.gz .
-COPY stlfile.hpp.patch .
+COPY *.patch .
 
 # Build the ibsimu c++ library.
 RUN tar zxvf libibsimu-1.0.6dev_e8500a2.tar.gz &&\
     cd libibsimu-1.0.6dev_e8500a2 &&\
     patch src/stlfile.hpp < ../stlfile.hpp.patch &&\
+    patch src/particledatabaseimp.hpp < ../particledatabaseimp.hpp.patch &&\
     ./configure --prefix=/home/ubuntu &&\
     make -j 4 &&\
     LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64/atlas make check &&\ 
@@ -46,3 +47,11 @@ ENV LD_LIBRARY_PATH=/home/ubuntu/lib
 ENV PKG_CONFIG_PATH=/home/ubuntu/lib/pkgconfig
 ENV DISPLAY=host.docker.internal:0
 RUN cd /pybsimu && make
+
+# Install AWS CLI
+RUN curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip \
+  && unzip awscliv2.zip \
+  && ./aws/install \
+  && rm -rf aws awscliv2.zip
+
+COPY private_pip_setup.sh /
