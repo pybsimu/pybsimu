@@ -22,6 +22,9 @@
 
 %rename(call) CallbackFunctorB_V::operator();
 
+%rename(get) VectorField::operator();
+%rename(get) EpotEfield::operator();
+
 
 // These are in the header but no implementation, not sure what's up with that
 %ignore Geometry::get_boundaries;
