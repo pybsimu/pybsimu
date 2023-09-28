@@ -27,7 +27,7 @@ RUN adduser $username && \
     cd ~/
 
 COPY libibsimu-1.0.6dev_e8500a2.tar.gz .
-COPY *.patch .
+COPY *.patch ./
 
 # Build the ibsimu c++ library.
 RUN tar zxvf libibsimu-1.0.6dev_e8500a2.tar.gz &&\
