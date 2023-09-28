@@ -21,7 +21,7 @@ RUN apt-get update &&\
     unzip
 
 RUN python3 -m pip install -U wheel setuptools pandas
-curl https://pyenv.run | bash
+RUN curl https://pyenv.run | bash
 
 RUN adduser $username && \
     chpasswd <<<"$username:$password" &&   usermod -aG sudo ubuntu &&   su - ubuntu && \
