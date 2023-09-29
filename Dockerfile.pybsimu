@@ -20,7 +20,7 @@ RUN apt-get update &&\
     python3.8-venv \
     unzip
 
-RUN python3 -m pip install -U wheel setuptools pandas scipy sympy
+RUN python3 -m pip install -U wheel setuptools pandas scipy sympy git+ssh://git@github.com:aed-zed/ioptics.git
 
 RUN adduser $username && \
     chpasswd <<<"$username:$password" &&   usermod -aG sudo ubuntu &&   su - ubuntu && \
