@@ -157,6 +157,21 @@
     }
 }
 
+%extend MeshScalarField {
+    double at(int i) {
+        return $self->operator()(i);
+    }
+
+    double at(int i, int j) {
+        return $self->operator()(i, j);
+    }
+
+    double at(int i, int j, int k) {
+        return $self->operator()(i, j, k);
+    }
+
+}
+
 %extend TrajectoryDiagnosticData {
     std::string to_csv_str() {
         std::ostringstream ost;
