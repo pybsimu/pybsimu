@@ -170,6 +170,18 @@
         return $self->operator()(i, j, k);
     }
 
+    void set(int i, double value) {
+        $self->operator()(i) = value;
+    }
+
+    void set(int i, int j, double value) {
+        $self->operator()(i, j) = value;
+    }
+
+    void set(int i, int j, int k, double value) {
+        $self->operator()(i, j, k) = value;
+    }
+
 }
 
 %extend TrajectoryDiagnosticData {
