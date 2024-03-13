@@ -92,6 +92,8 @@
 #include "fielddiagplotter.hpp"
 #include "particles.hpp"
 #include "particlediagplot.hpp"
+#include "particlediagplotter.hpp"
+#include "frame.hpp"
 #include <functional>
 #include <regex>
 %}
@@ -461,6 +463,8 @@
 %include "fielddiagplotter.hpp"
 %include "particles.hpp"
 %include "particlediagplotter.hpp"
+%include "particlediagplot.hpp"
+%include "frame.hpp"
 
 %typemap(in) int * ($*1_type temp1) {
     temp1 = PyInt_AsLong($input);
