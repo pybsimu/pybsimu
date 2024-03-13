@@ -1,6 +1,6 @@
 # Building docker image
 
-```docker build -t libibsimu-dev .```
+```docker build -t <image_name> -f Dockerfile.pybsimu .```
 
 # Starting docker container
 
