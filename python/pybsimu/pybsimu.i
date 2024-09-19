@@ -95,6 +95,7 @@
 #include "particlediagplotter.hpp"
 #include "frame.hpp"
 #include "dxf_solid.hpp"
+#include "mydxffile.hpp"
 #include <functional>
 #include <regex>
 %}
@@ -467,6 +468,7 @@
 %include "particlediagplot.hpp"
 %include "frame.hpp"
 %include "dxf_solid.hpp"
+%include "mydxffile.hpp"
 
 %typemap(in) int * ($*1_type temp1) {
     temp1 = PyInt_AsLong($input);
