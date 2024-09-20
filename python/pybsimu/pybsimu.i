@@ -96,6 +96,7 @@
 #include "frame.hpp"
 #include "dxf_solid.hpp"
 #include "mydxffile.hpp"
+#include "mydxfentities.hpp"
 #include <functional>
 #include <regex>
 %}
@@ -469,6 +470,7 @@
 %include "frame.hpp"
 %include "dxf_solid.hpp"
 %include "mydxffile.hpp"
+%include "mydxfentities.hpp"
 
 %typemap(in) int * ($*1_type temp1) {
     temp1 = PyInt_AsLong($input);
