@@ -36,6 +36,7 @@
 %ignore trajectory_diagnostic_string_with_unit;
 %ignore trajectory_diagnostic_string_unit;
 %ignore MeshColormap::has_data;
+%ignore MyDXFEntities::rotate_z;
 
 // Also adding x, y, z, in extend blocks later.
 %rename(at) Vec3D::operator[];
