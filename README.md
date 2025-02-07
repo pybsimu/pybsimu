@@ -1,12 +1,26 @@
+# pybsimu
+pybsimu is a wrapper for [IBSimu](https://ibsimu.sourceforge.net/), an ion beam simulator written by Taneli Kalvas. This package was developed by [Avlanache Energy](https://avalanchefusion.com/). Unfortunately, due to limited bandwidth, the maintenance and support of this code base will be limited. In addition, not every aspect of IBSimu has been ported over, so some features may be missing. 
+
+Before running IBSimu, docker must be installed [link](https://docs.docker.com/engine/install/) to build the environment necessary. A working knowledge of docker is extremely helpful as well. 
+
 # Building docker image
 
+Once docker is installed and this repository has been cloned locally, in any terminal navigate to this repository and run the following command:
+
+
 ```docker build -t <image_name> -f Dockerfile.pybsimu .```
+
+This will build the image locally and may take several minutes. 
 
 # Starting docker container
 
 ```cd my_model_source_directory```
 
 ```docker run -it -v `pwd`:/host libibsimu-dev bash```
+
+```docker start libibsimu-dev ```
+
+```docker exec -it libibsimu-dev bash```
 
 # Building model in the container, requires existing libibsimu Makefile
 
